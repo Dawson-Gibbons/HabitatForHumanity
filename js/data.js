@@ -1,5 +1,9 @@
 // Content data for the Habitat for Humanity Omaha Home Guide showcase.
 // All content is bilingual. UI chrome strings live in translations.js.
+//
+// youtube_url: each module links to a YouTube search URL (deterministic —
+// always returns real results). Swap in specific video URLs as they are
+// curated by Habitat staff or volunteers.
 
 const CATEGORIES = [
   {
@@ -68,217 +72,258 @@ const CATEGORIES = [
   }
 ];
 
+const YT = 'https://www.youtube.com/results?search_query=';
+
 const MODULES = [
   // HVAC
   { id: 'furnace-filter', category: 'hvac', type: 'steps', minutes: 10,
     title_en: 'Furnace Filter Replacement', title_es: 'Reemplazo del Filtro de la Caldera',
     summary_en: 'Swap your furnace filter in under ten minutes.',
     summary_es: 'Cambia el filtro de tu caldera en menos de diez minutos.',
-    tags_en: ['furnace', 'filter', 'air quality'], tags_es: ['caldera', 'filtro', 'calidad del aire'] },
+    tags_en: ['furnace', 'filter', 'air quality'], tags_es: ['caldera', 'filtro', 'calidad del aire'],
+    youtube_url: YT + 'how+to+replace+furnace+filter' },
   { id: 'thermostat-basics', category: 'hvac', type: 'steps', minutes: 8,
     title_en: 'Thermostat Basics', title_es: 'Conceptos Básicos del Termostato',
     summary_en: 'Learn the settings that save money and keep you comfortable.',
     summary_es: 'Aprende las configuraciones que ahorran dinero y te mantienen cómodo.',
-    tags_en: ['thermostat', 'heat', 'cool'], tags_es: ['termostato', 'calor', 'frío'] },
+    tags_en: ['thermostat', 'heat', 'cool'], tags_es: ['termostato', 'calor', 'frío'],
+    youtube_url: YT + 'thermostat+basics+how+to+use' },
   { id: 'air-vents', category: 'hvac', type: 'steps', minutes: 15,
     title_en: 'Air Vents — Cleaning & Unblocking', title_es: 'Rejillas de Aire — Limpieza y Desbloqueo',
     summary_en: 'Keep air flowing freely through every room.',
     summary_es: 'Mantén el aire circulando bien por cada habitación.',
-    tags_en: ['vents', 'airflow', 'dust'], tags_es: ['rejillas', 'flujo de aire', 'polvo'] },
+    tags_en: ['vents', 'airflow', 'dust'], tags_es: ['rejillas', 'flujo de aire', 'polvo'],
+    youtube_url: YT + 'how+to+clean+air+vents+home' },
   { id: 'hvac-when-to-call', category: 'hvac', type: 'checklist', minutes: 5,
     title_en: 'When to Call an HVAC Technician', title_es: 'Cuándo Llamar a un Técnico de HVAC',
     summary_en: 'A quick checklist for problems beyond a DIY fix.',
     summary_es: 'Una lista rápida para problemas más allá del arreglo casero.',
-    tags_en: ['technician', 'emergency', 'repair'], tags_es: ['técnico', 'emergencia', 'reparación'] },
+    tags_en: ['technician', 'emergency', 'repair'], tags_es: ['técnico', 'emergencia', 'reparación'],
+    youtube_url: YT + 'when+to+call+hvac+technician' },
 
   // Plumbing
   { id: 'water-shutoff', category: 'plumbing', type: 'drag-scene', minutes: 5,
     title_en: 'Water Main Shutoff', title_es: 'Llave Principal de Agua',
     summary_en: 'Know exactly where to turn off water in a flood.',
     summary_es: 'Sabe exactamente dónde cerrar el agua en una inundación.',
-    tags_en: ['emergency', 'water', 'shutoff', 'flood'], tags_es: ['emergencia', 'agua', 'llave', 'inundación'] },
+    tags_en: ['emergency', 'water', 'shutoff', 'flood'], tags_es: ['emergencia', 'agua', 'llave', 'inundación'],
+    youtube_url: YT + 'how+to+shut+off+water+main+house' },
   { id: 'unclog-drains', category: 'plumbing', type: 'steps', minutes: 15,
     title_en: 'Unclogging Drains', title_es: 'Destapar Desagües',
     summary_en: 'Clear slow sinks and tubs without harsh chemicals.',
     summary_es: 'Destapa fregaderos y tinas sin químicos fuertes.',
-    tags_en: ['drain', 'clog', 'sink'], tags_es: ['desagüe', 'tapón', 'fregadero'] },
+    tags_en: ['drain', 'clog', 'sink'], tags_es: ['desagüe', 'tapón', 'fregadero'],
+    youtube_url: YT + 'how+to+unclog+drain' },
   { id: 'running-toilet', category: 'plumbing', type: 'steps', minutes: 20,
     title_en: 'Fixing a Running Toilet', title_es: 'Arreglar un Inodoro que No Para',
     summary_en: 'Stop the water from running and save on your bill.',
     summary_es: 'Detén el agua que corre y ahorra en tu factura.',
-    tags_en: ['toilet', 'running', 'flapper'], tags_es: ['inodoro', 'agua', 'tapa'] },
+    tags_en: ['toilet', 'running', 'flapper'], tags_es: ['inodoro', 'agua', 'tapa'],
+    youtube_url: YT + 'how+to+fix+running+toilet' },
   { id: 'undersink-valves', category: 'plumbing', type: 'drag-scene', minutes: 5,
     title_en: 'Under-Sink Shutoff Valves', title_es: 'Llaves Debajo del Lavabo',
     summary_en: 'Find the small valves that save sinks from leaks.',
     summary_es: 'Encuentra las llaves pequeñas que evitan fugas.',
-    tags_en: ['valve', 'sink', 'leak'], tags_es: ['llave', 'lavabo', 'fuga'] },
+    tags_en: ['valve', 'sink', 'leak'], tags_es: ['llave', 'lavabo', 'fuga'],
+    youtube_url: YT + 'under+sink+shutoff+valve+how+to+use' },
   { id: 'water-heater', category: 'plumbing', type: 'steps', minutes: 15,
     title_en: 'Water Heater Basics', title_es: 'Conceptos Básicos del Calentador de Agua',
     summary_en: 'Safe temperature, flushing, and warning signs.',
     summary_es: 'Temperatura segura, drenaje y señales de advertencia.',
-    tags_en: ['water heater', 'temperature'], tags_es: ['calentador', 'temperatura'] },
+    tags_en: ['water heater', 'temperature'], tags_es: ['calentador', 'temperatura'],
+    youtube_url: YT + 'water+heater+basics+maintenance' },
   { id: 'frozen-pipes', category: 'plumbing', type: 'checklist', minutes: 5,
     title_en: 'Preventing Frozen Pipes', title_es: 'Prevenir Tuberías Congeladas',
     summary_en: 'A winter checklist to keep your pipes safe.',
     summary_es: 'Una lista de invierno para proteger tus tuberías.',
-    tags_en: ['winter', 'frozen', 'pipes'], tags_es: ['invierno', 'congeladas', 'tuberías'] },
+    tags_en: ['winter', 'frozen', 'pipes'], tags_es: ['invierno', 'congeladas', 'tuberías'],
+    youtube_url: YT + 'how+to+prevent+frozen+pipes' },
 
   // Electrical
   { id: 'breaker-box', category: 'electrical', type: 'drag-scene', minutes: 5,
     title_en: 'Breaker Box Basics', title_es: 'Conceptos Básicos de la Caja de Breakers',
     summary_en: 'Find and label the switches that control your home.',
     summary_es: 'Encuentra y etiqueta los interruptores que controlan tu hogar.',
-    tags_en: ['breaker', 'power', 'electrical'], tags_es: ['breaker', 'energía', 'electricidad'] },
+    tags_en: ['breaker', 'power', 'electrical'], tags_es: ['breaker', 'energía', 'electricidad'],
+    youtube_url: YT + 'circuit+breaker+box+basics+home' },
   { id: 'gfci-outlets', category: 'electrical', type: 'steps', minutes: 5,
     title_en: 'GFCI Outlets', title_es: 'Enchufes GFCI',
     summary_en: 'Test and reset the outlets near water.',
     summary_es: 'Prueba y reinicia los enchufes cerca del agua.',
-    tags_en: ['gfci', 'outlet', 'bathroom'], tags_es: ['gfci', 'enchufe', 'baño'] },
+    tags_en: ['gfci', 'outlet', 'bathroom'], tags_es: ['gfci', 'enchufe', 'baño'],
+    youtube_url: YT + 'how+to+test+reset+gfci+outlet' },
   { id: 'light-switch', category: 'electrical', type: 'steps', minutes: 25,
     title_en: 'Changing a Light Switch or Outlet', title_es: 'Cambiar un Interruptor o Enchufe',
     summary_en: 'Replace a switch or outlet the safe way.',
     summary_es: 'Reemplaza un interruptor o enchufe de forma segura.',
-    tags_en: ['switch', 'outlet', 'wiring'], tags_es: ['interruptor', 'enchufe', 'cables'] },
+    tags_en: ['switch', 'outlet', 'wiring'], tags_es: ['interruptor', 'enchufe', 'cables'],
+    youtube_url: YT + 'how+to+replace+light+switch+outlet' },
   { id: 'electrical-when-to-call', category: 'electrical', type: 'checklist', minutes: 5,
     title_en: 'When to Call an Electrician', title_es: 'Cuándo Llamar a un Electricista',
     summary_en: 'Warning signs that mean stop and call a pro.',
     summary_es: 'Señales que significan parar y llamar a un profesional.',
-    tags_en: ['electrician', 'safety'], tags_es: ['electricista', 'seguridad'] },
+    tags_en: ['electrician', 'safety'], tags_es: ['electricista', 'seguridad'],
+    youtube_url: YT + 'when+to+call+electrician+home' },
 
   // Exterior
   { id: 'gutters', category: 'exterior', type: 'steps', minutes: 60,
     title_en: 'Gutters — Cleaning & Maintenance', title_es: 'Canaletas — Limpieza y Mantenimiento',
     summary_en: 'Keep water flowing away from your foundation.',
     summary_es: 'Mantén el agua lejos de tu cimentación.',
-    tags_en: ['gutters', 'rain', 'roof'], tags_es: ['canaletas', 'lluvia', 'techo'] },
+    tags_en: ['gutters', 'rain', 'roof'], tags_es: ['canaletas', 'lluvia', 'techo'],
+    youtube_url: YT + 'how+to+clean+gutters' },
   { id: 'caulking-windows', category: 'exterior', type: 'steps', minutes: 30,
     title_en: 'Caulking Windows & Doors', title_es: 'Sellar Ventanas y Puertas',
     summary_en: 'Seal drafts and stop heat from escaping.',
     summary_es: 'Sella corrientes y evita que escape el calor.',
-    tags_en: ['caulk', 'seal', 'drafts'], tags_es: ['sellador', 'aire', 'corrientes'] },
+    tags_en: ['caulk', 'seal', 'drafts'], tags_es: ['sellador', 'aire', 'corrientes'],
+    youtube_url: YT + 'how+to+caulk+windows+doors' },
   { id: 'roof-basics', category: 'exterior', type: 'checklist', minutes: 10,
     title_en: 'Roof Basics', title_es: 'Conceptos Básicos del Techo',
     summary_en: 'What to look for without climbing a ladder.',
     summary_es: 'Qué buscar sin subirte a una escalera.',
-    tags_en: ['roof', 'shingles', 'inspection'], tags_es: ['techo', 'tejas', 'inspección'] },
+    tags_en: ['roof', 'shingles', 'inspection'], tags_es: ['techo', 'tejas', 'inspección'],
+    youtube_url: YT + 'roof+inspection+from+ground' },
   { id: 'driveway-repair', category: 'exterior', type: 'steps', minutes: 45,
     title_en: 'Driveway & Sidewalk Crack Repair', title_es: 'Reparar Grietas en Entrada y Acera',
     summary_en: 'Stop small cracks from becoming big problems.',
     summary_es: 'Evita que grietas pequeñas crezcan.',
-    tags_en: ['concrete', 'driveway', 'cracks'], tags_es: ['concreto', 'entrada', 'grietas'] },
+    tags_en: ['concrete', 'driveway', 'cracks'], tags_es: ['concreto', 'entrada', 'grietas'],
+    youtube_url: YT + 'how+to+repair+driveway+concrete+crack' },
   { id: 'grading-drainage', category: 'exterior', type: 'steps', minutes: 30,
     title_en: 'Grading & Drainage', title_es: 'Nivelación y Drenaje',
     summary_en: 'Direct rainwater away from your home.',
     summary_es: 'Dirige el agua de lluvia lejos de tu casa.',
-    tags_en: ['grading', 'drainage', 'yard'], tags_es: ['nivelación', 'drenaje', 'jardín'] },
+    tags_en: ['grading', 'drainage', 'yard'], tags_es: ['nivelación', 'drenaje', 'jardín'],
+    youtube_url: YT + 'yard+grading+drainage+home+foundation' },
 
   // Lawn
   { id: 'lawn-calendar', category: 'lawn', type: 'checklist', minutes: 5,
     title_en: 'Seasonal Lawn Care Calendar', title_es: 'Calendario Estacional del Césped',
     summary_en: 'Know what your yard needs each season.',
     summary_es: 'Sabe qué necesita tu jardín cada temporada.',
-    tags_en: ['lawn', 'seasonal', 'calendar'], tags_es: ['césped', 'temporada', 'calendario'] },
+    tags_en: ['lawn', 'seasonal', 'calendar'], tags_es: ['césped', 'temporada', 'calendario'],
+    youtube_url: YT + 'seasonal+lawn+care+calendar' },
   { id: 'mowing', category: 'lawn', type: 'steps', minutes: 10,
     title_en: 'Mowing Technique & Blade Height', title_es: 'Técnica de Cortar Césped y Altura',
     summary_en: 'The right cut makes a healthier lawn.',
     summary_es: 'El corte correcto hace un césped más sano.',
-    tags_en: ['mowing', 'grass', 'lawn'], tags_es: ['cortar', 'césped', 'pasto'] },
+    tags_en: ['mowing', 'grass', 'lawn'], tags_es: ['cortar', 'césped', 'pasto'],
+    youtube_url: YT + 'proper+lawn+mowing+technique+height' },
   { id: 'watering', category: 'lawn', type: 'steps', minutes: 5,
     title_en: 'Watering Basics', title_es: 'Conceptos Básicos de Riego',
     summary_en: 'Water deeply and less often for strong roots.',
     summary_es: 'Riega profundo y menos seguido para raíces fuertes.',
-    tags_en: ['water', 'lawn', 'garden'], tags_es: ['riego', 'césped', 'jardín'] },
+    tags_en: ['water', 'lawn', 'garden'], tags_es: ['riego', 'césped', 'jardín'],
+    youtube_url: YT + 'how+often+to+water+lawn' },
   { id: 'mulching', category: 'lawn', type: 'steps', minutes: 20,
     title_en: 'Mulching & Garden Bed Care', title_es: 'Mantillo y Cuidado de Jardineras',
     summary_en: 'Hold moisture in and keep weeds out.',
     summary_es: 'Retén humedad y evita malas hierbas.',
-    tags_en: ['mulch', 'garden', 'bed'], tags_es: ['mantillo', 'jardín', 'jardinera'] },
+    tags_en: ['mulch', 'garden', 'bed'], tags_es: ['mantillo', 'jardín', 'jardinera'],
+    youtube_url: YT + 'how+to+mulch+garden+bed' },
   { id: 'winterize-faucets', category: 'lawn', type: 'steps', minutes: 15,
     title_en: 'Winterizing Outdoor Faucets & Hoses', title_es: 'Preparar Grifos Exteriores para Invierno',
     summary_en: 'Protect outside faucets before the first freeze.',
     summary_es: 'Protege los grifos exteriores antes del primer hielo.',
-    tags_en: ['winter', 'faucet', 'hose'], tags_es: ['invierno', 'grifo', 'manguera'] },
+    tags_en: ['winter', 'faucet', 'hose'], tags_es: ['invierno', 'grifo', 'manguera'],
+    youtube_url: YT + 'how+to+winterize+outdoor+faucet+hose' },
 
   // Interior
   { id: 'patch-drywall', category: 'interior', type: 'steps', minutes: 40,
     title_en: 'Patching Drywall', title_es: 'Parchar Drywall',
     summary_en: 'Fix holes big and small with a clean finish.',
     summary_es: 'Arregla hoyos grandes y pequeños con acabado limpio.',
-    tags_en: ['drywall', 'hole', 'patch'], tags_es: ['drywall', 'hoyo', 'parche'] },
+    tags_en: ['drywall', 'hole', 'patch'], tags_es: ['drywall', 'hoyo', 'parche'],
+    youtube_url: YT + 'how+to+patch+drywall+hole' },
   { id: 'painting', category: 'interior', type: 'steps', minutes: 120,
     title_en: 'Painting a Room', title_es: 'Pintar una Habitación',
     summary_en: 'Prep, paint, and clean up like a pro.',
     summary_es: 'Preparar, pintar y limpiar como un profesional.',
-    tags_en: ['paint', 'room', 'color'], tags_es: ['pintura', 'habitación', 'color'] },
+    tags_en: ['paint', 'room', 'color'], tags_es: ['pintura', 'habitación', 'color'],
+    youtube_url: YT + 'how+to+paint+a+room' },
   { id: 'squeaky-door', category: 'interior', type: 'steps', minutes: 10,
     title_en: 'Fixing a Squeaky or Sticking Door', title_es: 'Arreglar una Puerta que Chirría',
     summary_en: 'End the squeak and get doors gliding again.',
     summary_es: 'Termina con el chirrido y haz que las puertas se deslicen.',
-    tags_en: ['door', 'hinge', 'squeak'], tags_es: ['puerta', 'bisagra', 'chirrido'] },
+    tags_en: ['door', 'hinge', 'squeak'], tags_es: ['puerta', 'bisagra', 'chirrido'],
+    youtube_url: YT + 'how+to+fix+squeaky+door+hinge' },
   { id: 'caulk-tub', category: 'interior', type: 'steps', minutes: 30,
     title_en: 'Caulking a Tub or Shower', title_es: 'Sellar una Tina o Regadera',
     summary_en: 'Seal edges and prevent water damage.',
     summary_es: 'Sella los bordes y evita daños por agua.',
-    tags_en: ['caulk', 'tub', 'bathroom'], tags_es: ['sellador', 'tina', 'baño'] },
+    tags_en: ['caulk', 'tub', 'bathroom'], tags_es: ['sellador', 'tina', 'baño'],
+    youtube_url: YT + 'how+to+caulk+bathtub+shower' },
   { id: 'replace-tile', category: 'interior', type: 'steps', minutes: 60,
     title_en: 'Replacing a Flooring Tile', title_es: 'Reemplazar una Loseta del Piso',
     summary_en: 'Swap a cracked tile without redoing the floor.',
     summary_es: 'Cambia una loseta rota sin rehacer todo el piso.',
-    tags_en: ['tile', 'floor', 'grout'], tags_es: ['loseta', 'piso', 'lechada'] },
+    tags_en: ['tile', 'floor', 'grout'], tags_es: ['loseta', 'piso', 'lechada'],
+    youtube_url: YT + 'how+to+replace+broken+floor+tile' },
 
   // Safety
   { id: 'smoke-co-detectors', category: 'safety', type: 'checklist', minutes: 10,
     title_en: 'Smoke & CO Detector Placement', title_es: 'Detectores de Humo y CO',
     summary_en: 'Put detectors where they will save your family.',
     summary_es: 'Coloca detectores donde salven a tu familia.',
-    tags_en: ['smoke', 'detector', 'safety'], tags_es: ['humo', 'detector', 'seguridad'] },
+    tags_en: ['smoke', 'detector', 'safety'], tags_es: ['humo', 'detector', 'seguridad'],
+    youtube_url: YT + 'smoke+co+detector+placement+home' },
   { id: 'fire-extinguisher', category: 'safety', type: 'steps', minutes: 10,
     title_en: 'Fire Extinguisher Basics', title_es: 'Conceptos Básicos del Extintor',
     summary_en: 'Know how to use PASS when seconds matter.',
     summary_es: 'Aprende el método PASS cuando cada segundo cuenta.',
-    tags_en: ['fire', 'extinguisher', 'emergency'], tags_es: ['fuego', 'extintor', 'emergencia'] },
+    tags_en: ['fire', 'extinguisher', 'emergency'], tags_es: ['fuego', 'extintor', 'emergencia'],
+    youtube_url: YT + 'how+to+use+fire+extinguisher+pass' },
   { id: 'emergency-kit', category: 'safety', type: 'checklist', minutes: 15,
     title_en: 'Home Emergency Kit', title_es: 'Kit de Emergencia del Hogar',
     summary_en: 'Pack what your family needs for 72 hours.',
     summary_es: 'Empaca lo que tu familia necesita por 72 horas.',
-    tags_en: ['emergency', 'kit', 'preparedness'], tags_es: ['emergencia', 'kit', 'preparación'] },
+    tags_en: ['emergency', 'kit', 'preparedness'], tags_es: ['emergencia', 'kit', 'preparación'],
+    youtube_url: YT + 'home+emergency+kit+72+hours' },
   { id: 'power-outage', category: 'safety', type: 'steps', minutes: 10,
     title_en: 'What to Do When the Power Goes Out', title_es: 'Qué Hacer Cuando No Hay Luz',
     summary_en: 'Stay safe and comfortable without electricity.',
     summary_es: 'Mantente seguro y cómodo sin electricidad.',
-    tags_en: ['power', 'outage', 'emergency'], tags_es: ['luz', 'apagón', 'emergencia'] },
+    tags_en: ['power', 'outage', 'emergency'], tags_es: ['luz', 'apagón', 'emergencia'],
+    youtube_url: YT + 'what+to+do+power+outage+home' },
   { id: 'utility-contacts', category: 'safety', type: 'checklist', minutes: 5,
     title_en: 'Knowing Your Utility Contacts', title_es: 'Contactos de Servicios Públicos',
     summary_en: 'Save the numbers you need before you need them.',
     summary_es: 'Guarda los números que necesitas antes de necesitarlos.',
-    tags_en: ['utility', 'contact', 'phone'], tags_es: ['servicios', 'contacto', 'teléfono'] },
+    tags_en: ['utility', 'contact', 'phone'], tags_es: ['servicios', 'contacto', 'teléfono'],
+    youtube_url: YT + 'home+utility+emergency+contacts' },
 
   // Appliances
   { id: 'fridge-coils', category: 'appliances', type: 'steps', minutes: 20,
     title_en: 'Cleaning Refrigerator Coils', title_es: 'Limpiar los Serpentines del Refrigerador',
     summary_en: 'A simple clean that lowers your power bill.',
     summary_es: 'Una limpieza simple que baja tu factura de luz.',
-    tags_en: ['fridge', 'coils', 'clean'], tags_es: ['refrigerador', 'serpentines', 'limpiar'] },
+    tags_en: ['fridge', 'coils', 'clean'], tags_es: ['refrigerador', 'serpentines', 'limpiar'],
+    youtube_url: YT + 'how+to+clean+refrigerator+coils' },
   { id: 'dryer-vent', category: 'appliances', type: 'steps', minutes: 30,
     title_en: 'Dryer Vent Cleaning', title_es: 'Limpieza del Ducto de la Secadora',
     summary_en: 'Prevent the #1 cause of dryer fires.',
     summary_es: 'Previene la causa #1 de incendios de secadora.',
-    tags_en: ['dryer', 'vent', 'fire'], tags_es: ['secadora', 'ducto', 'fuego'] },
+    tags_en: ['dryer', 'vent', 'fire'], tags_es: ['secadora', 'ducto', 'fuego'],
+    youtube_url: YT + 'how+to+clean+dryer+vent' },
   { id: 'dishwasher', category: 'appliances', type: 'steps', minutes: 15,
     title_en: 'Dishwasher Filter & Spray Arm', title_es: 'Filtro y Brazo del Lavavajillas',
     summary_en: 'Get your dishes truly clean again.',
     summary_es: 'Haz que tus platos salgan realmente limpios.',
-    tags_en: ['dishwasher', 'filter', 'clean'], tags_es: ['lavavajillas', 'filtro', 'limpiar'] },
+    tags_en: ['dishwasher', 'filter', 'clean'], tags_es: ['lavavajillas', 'filtro', 'limpiar'],
+    youtube_url: YT + 'how+to+clean+dishwasher+filter+spray+arm' },
   { id: 'garbage-disposal', category: 'appliances', type: 'steps', minutes: 10,
     title_en: 'Garbage Disposal Care', title_es: 'Cuidado del Triturador de Basura',
     summary_en: 'Keep the disposal running for years.',
     summary_es: 'Mantén el triturador funcionando por años.',
-    tags_en: ['disposal', 'sink', 'kitchen'], tags_es: ['triturador', 'fregadero', 'cocina'] },
+    tags_en: ['disposal', 'sink', 'kitchen'], tags_es: ['triturador', 'fregadero', 'cocina'],
+    youtube_url: YT + 'garbage+disposal+care+maintenance' },
   { id: 'deep-clean', category: 'appliances', type: 'checklist', minutes: 90,
     title_en: 'Deep Cleaning Basics', title_es: 'Conceptos Básicos de Limpieza Profunda',
     summary_en: 'Room-by-room checklist for a full clean.',
     summary_es: 'Lista por habitación para una limpieza completa.',
-    tags_en: ['clean', 'deep', 'home'], tags_es: ['limpieza', 'profunda', 'hogar'] }
+    tags_en: ['clean', 'deep', 'home'], tags_es: ['limpieza', 'profunda', 'hogar'],
+    youtube_url: YT + 'deep+cleaning+house+checklist' }
 ];
 
 // Seasonal checklist — pulled straight from spec Section 6.
@@ -320,6 +365,7 @@ const SEASONAL = {
 };
 
 // Emergency quick-access tiles (from stretch feature in spec §14).
+// `link` points to a module id — rendered as #/module/{id} by render.js.
 const EMERGENCIES = [
   { id: 'flood', icon: '🌊', label_en: 'Flooding', label_es: 'Inundación', link: 'water-shutoff' },
   { id: 'power', icon: '💡', label_en: 'Power out', label_es: 'Sin luz', link: 'power-outage' },
@@ -327,66 +373,70 @@ const EMERGENCIES = [
   { id: 'fire',  icon: '🔥', label_en: 'Smoke or fire', label_es: 'Humo o fuego', link: 'fire-extinguisher' }
 ];
 
-// Sample step walkthrough used by the StepViewer demo section.
-const SAMPLE_STEPS = {
-  en: {
-    title: 'Water Main Shutoff',
-    intro: 'A preview of a step-by-step module. Every module in the real app works just like this — large pictures, short text, no pressure.',
-    steps: [
-      {
-        headline: 'Find the shutoff valve',
-        body: 'The main shutoff is usually near the front foundation wall in the basement, or outside near the water meter.',
-        illustration: '🔍',
-        tip: 'Mark it with a bright tag so you can find it fast in an emergency.'
-      },
-      {
-        headline: 'Turn the handle clockwise',
-        body: 'Turn the valve handle all the way to the right. It should stop when the water is fully off.',
-        illustration: '🔧',
-        tip: 'If the handle feels stuck, do not force it. A broken valve is worse than a slow leak.'
-      },
-      {
-        headline: 'Open a faucet to release pressure',
-        body: 'Open the lowest faucet in the house to drain the remaining water in the pipes.',
-        illustration: '🚰',
-        tip: null
-      },
-      {
-        headline: 'Call for help when needed',
-        body: 'Once the water is off, take a breath. Call a plumber or your Habitat contact to plan the next step.',
-        illustration: '📞',
-        tip: 'Save your plumber and utility numbers in your phone today — not during the emergency.'
-      }
-    ]
-  },
-  es: {
-    title: 'Llave Principal de Agua',
-    intro: 'Una muestra de un módulo paso a paso. Cada módulo en la app real funciona así — imágenes grandes, texto corto, sin presión.',
-    steps: [
-      {
-        headline: 'Encuentra la llave principal',
-        body: 'La llave principal suele estar cerca de la pared frontal del sótano, o afuera cerca del medidor de agua.',
-        illustration: '🔍',
-        tip: 'Márcala con una etiqueta brillante para encontrarla rápido en una emergencia.'
-      },
-      {
-        headline: 'Gira la manija a la derecha',
-        body: 'Gira la manija completamente a la derecha. Debe detenerse cuando el agua esté cerrada.',
-        illustration: '🔧',
-        tip: 'Si la manija no se mueve, no la fuerces. Una llave rota es peor que una fuga lenta.'
-      },
-      {
-        headline: 'Abre un grifo para liberar presión',
-        body: 'Abre el grifo más bajo de la casa para drenar el agua que queda en las tuberías.',
-        illustration: '🚰',
-        tip: null
-      },
-      {
-        headline: 'Pide ayuda cuando sea necesario',
-        body: 'Una vez cerrada el agua, respira. Llama a un plomero o a tu contacto de Habitat para planear el siguiente paso.',
-        illustration: '📞',
-        tip: 'Guarda los números de tu plomero y servicios hoy — no durante la emergencia.'
-      }
-    ]
+// Step-by-step content keyed by module id. Modules without an entry fall
+// back to a "coming soon" block on their detail page. The landing-page
+// preview (#sample) reads water-shutoff from here.
+const MODULE_STEPS = {
+  'water-shutoff': {
+    en: {
+      title: 'Water Main Shutoff',
+      intro: 'A preview of a step-by-step module. Every module in the real app works just like this — large pictures, short text, no pressure.',
+      steps: [
+        {
+          headline: 'Find the shutoff valve',
+          body: 'The main shutoff is usually near the front foundation wall in the basement, or outside near the water meter.',
+          illustration: '🔍',
+          tip: 'Mark it with a bright tag so you can find it fast in an emergency.'
+        },
+        {
+          headline: 'Turn the handle clockwise',
+          body: 'Turn the valve handle all the way to the right. It should stop when the water is fully off.',
+          illustration: '🔧',
+          tip: 'If the handle feels stuck, do not force it. A broken valve is worse than a slow leak.'
+        },
+        {
+          headline: 'Open a faucet to release pressure',
+          body: 'Open the lowest faucet in the house to drain the remaining water in the pipes.',
+          illustration: '🚰',
+          tip: null
+        },
+        {
+          headline: 'Call for help when needed',
+          body: 'Once the water is off, take a breath. Call a plumber or your Habitat contact to plan the next step.',
+          illustration: '📞',
+          tip: 'Save your plumber and utility numbers in your phone today — not during the emergency.'
+        }
+      ]
+    },
+    es: {
+      title: 'Llave Principal de Agua',
+      intro: 'Una muestra de un módulo paso a paso. Cada módulo en la app real funciona así — imágenes grandes, texto corto, sin presión.',
+      steps: [
+        {
+          headline: 'Encuentra la llave principal',
+          body: 'La llave principal suele estar cerca de la pared frontal del sótano, o afuera cerca del medidor de agua.',
+          illustration: '🔍',
+          tip: 'Márcala con una etiqueta brillante para encontrarla rápido en una emergencia.'
+        },
+        {
+          headline: 'Gira la manija a la derecha',
+          body: 'Gira la manija completamente a la derecha. Debe detenerse cuando el agua esté cerrada.',
+          illustration: '🔧',
+          tip: 'Si la manija no se mueve, no la fuerces. Una llave rota es peor que una fuga lenta.'
+        },
+        {
+          headline: 'Abre un grifo para liberar presión',
+          body: 'Abre el grifo más bajo de la casa para drenar el agua que queda en las tuberías.',
+          illustration: '🚰',
+          tip: null
+        },
+        {
+          headline: 'Pide ayuda cuando sea necesario',
+          body: 'Una vez cerrada el agua, respira. Llama a un plomero o a tu contacto de Habitat para planear el siguiente paso.',
+          illustration: '📞',
+          tip: 'Guarda los números de tu plomero y servicios hoy — no durante la emergencia.'
+        }
+      ]
+    }
   }
 };

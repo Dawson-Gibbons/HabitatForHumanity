@@ -45,11 +45,22 @@ const TRANSLATIONS = {
     'sample.tip': 'Tip',
 
     'library.title': 'Full module library',
-    'library.subtitle': 'Every module, grouped by category. Click to preview the design.',
+    'library.subtitle': 'Every module, grouped by category. Click any module to open its page.',
     'library.badge.steps': 'Step-by-step',
     'library.badge.drag': 'Interactive',
     'library.badge.checklist': 'Checklist',
     'library.minutes': 'min',
+
+    'module.back': 'Back',
+    'module.steps.title': 'Step-by-step',
+    'module.youtube.label': 'Watch on YouTube',
+    'module.youtube.sub': 'Opens a YouTube search for this topic in a new tab.',
+    'module.topics': 'Topics',
+    'module.coming.title': 'Detailed steps coming soon',
+    'module.coming.body': 'For now, the video link above covers the essentials. Full step-by-step content for this module is being written with Habitat staff.',
+    'module.notfound.title': 'Module not found',
+    'module.notfound.body': 'The module you are looking for does not exist. Browse categories to find what you need.',
+    'module.notfound.cta': 'Browse categories',
 
     'philosophy.eyebrow': 'How it works',
     'philosophy.title': 'Built around real families.',
