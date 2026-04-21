@@ -62,6 +62,83 @@ function initStatBadges() {
   if (catEl) catEl.textContent = String(cats);
 }
 
+function openModuleModal(moduleId) {
+  const mod = MODULES.find(m => m.id === moduleId);
+  if (!mod) return;
+  const lang = getLang();
+  const modal = document.getElementById('video-modal');
+
+  const cat = CATEGORIES.find(c => c.id === mod.category);
+  document.getElementById('modal-eyebrow').textContent = cat ? cat[`name_${lang}`] : '';
+  document.getElementById('modal-title').textContent = mod[`title_${lang}`];
+  document.getElementById('modal-summary').textContent = mod[`summary_${lang}`];
+
+  let embedSrc = `https://www.youtube.com/embed/${mod.youtube_id}?rel=0&modestbranding=1`;
+  if (mod.youtube_start) embedSrc += `&start=${mod.youtube_start}`;
+  document.getElementById('modal-iframe').src = embedSrc;
+
+  const ytLink = document.getElementById('modal-yt-link');
+  ytLink.href = mod.youtube_url;
+  document.getElementById('modal-yt-label').textContent = t('module.youtube.label', lang);
+
+  const stepsEl = document.getElementById('modal-steps');
+  const stepData = MODULE_STEPS[moduleId];
+  if (stepData && stepData[lang]) {
+    const sd = stepData[lang];
+    const items = sd.steps.map((step, i) => {
+      const tipHtml = step.tip
+        ? `<div class="modal-step-tip"><span class="modal-step-tip-label">${t('sample.tip', lang)}</span> ${escapeHtml(step.tip)}</div>`
+        : '';
+      return `
+        <li class="modal-step">
+          <div class="modal-step-num">${i + 1}</div>
+          <div class="modal-step-text">
+            <div class="modal-step-illustration" aria-hidden="true">${step.illustration}</div>
+            <h4 class="modal-step-headline">${escapeHtml(step.headline)}</h4>
+            <p class="modal-step-body">${escapeHtml(step.body)}</p>
+            ${tipHtml}
+          </div>
+        </li>`;
+    }).join('');
+    stepsEl.innerHTML = `
+      <h3 class="modal-steps-heading">${t('module.steps.title', lang)}</h3>
+      <ol class="modal-steps-list">${items}</ol>`;
+  } else {
+    stepsEl.innerHTML = '';
+  }
+
+  modal.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('modal-close').focus();
+}
+
+function closeModuleModal() {
+  const modal = document.getElementById('video-modal');
+  modal.classList.remove('is-open');
+  document.body.style.overflow = '';
+  document.getElementById('modal-iframe').src = '';
+}
+
+function initModuleModal() {
+  document.getElementById('modal-close').addEventListener('click', closeModuleModal);
+  document.getElementById('modal-backdrop').addEventListener('click', closeModuleModal);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && document.getElementById('video-modal').classList.contains('is-open')) {
+      closeModuleModal();
+    }
+  });
+
+  document.addEventListener('click', e => {
+    const card = e.target.closest('[data-module-id]');
+    if (!card) return;
+    const moduleId = card.dataset.moduleId;
+    if (!moduleId) return;
+    e.preventDefault();
+    openModuleModal(moduleId);
+  });
+}
+
 function boot() {
   document.documentElement.lang = getLang();
   initLanguageToggle();
@@ -70,6 +147,7 @@ function boot() {
   initStatBadges();
   renderAll();
   initReveal();
+  initModuleModal();
 
   document.addEventListener('lang:change', () => {
     renderSeasonal();

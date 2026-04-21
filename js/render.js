@@ -48,7 +48,7 @@ function renderLibrary() {
       const summary = m[`summary_${lang}`];
       const badge = t(typeBadgeKey(m.type), lang);
       return `
-        <article class="module-card module-card--${m.type}">
+        <button type="button" class="module-card module-card--${m.type}" data-module-id="${m.id}">
           <div class="module-card-type">
             <span class="module-type-dot" aria-hidden="true"></span>
             ${escapeHtml(badge)}
@@ -57,9 +57,9 @@ function renderLibrary() {
           <p class="module-card-summary">${escapeHtml(summary)}</p>
           <div class="module-card-meta">
             <span class="module-card-mins">${m.minutes} ${t('library.minutes', lang)}</span>
-            <span class="module-card-id">${m.id}</span>
+            <span class="module-card-play" aria-hidden="true">▶ Watch</span>
           </div>
-        </article>
+        </button>
       `;
     }).join('');
 
