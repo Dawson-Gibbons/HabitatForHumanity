@@ -77,7 +77,14 @@ Releases happen occasionally, not after every push to `develop`. Open a `develop
 5. Use **"Squash and merge"** or **"Create a merge commit"** — never rebase onto main
 6. After merge, GitHub Pages will automatically deploy from `main`
 
-**Claude Code must never merge into `main` directly.** If asked to deploy or push to main, open a PR instead and inform the user that a review is required.
+### How to open the PR
+Use this link to go straight to the create-PR page with `develop → main` pre-selected:
+
+**https://github.com/Dawson-Gibbons/HabitatForHumanity/compare/main...develop**
+
+This is the preferred way for this team. The `gh` CLI is not required and Claude Code should not suggest installing it — just provide the link above along with a suggested title and body.
+
+**Claude Code must never merge into `main` directly.** If asked to deploy or push to main, provide the compare link above and inform the user that a review is required.
 
 ---
 
