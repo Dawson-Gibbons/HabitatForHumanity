@@ -1,0 +1,155 @@
+// UI chrome strings — everything outside of module/seasonal content.
+// Keyed by i18n attribute, consumed by language.js.
+
+const TRANSLATIONS = {
+  en: {
+    'nav.brand': 'HFH Omaha Home Guide',
+    'nav.categories': 'Categories',
+    'nav.library': 'All modules',
+    'nav.seasonal': 'This month',
+    'nav.about': 'About',
+    'lang.toggle': 'Español',
+    'lang.toggle.aria': 'Switch to Spanish',
+
+    'hero.eyebrow': 'Welcome home',
+    'hero.title': 'Your home, explained in plain steps.',
+    'hero.subtitle': 'A friendly guide to the home you worked so hard for. Browse freely — no modules to finish, no progress to track.',
+    'hero.cta.browse': 'Browse categories',
+    'hero.cta.seasonal': 'What to do this month',
+    'hero.badge.modules': 'modules',
+    'hero.badge.categories': 'categories',
+    'hero.badge.languages': 'languages',
+
+    'seasonal.title': 'This month in your home',
+    'seasonal.subtitle': 'Small things that keep a home running well.',
+    'seasonal.hint': 'Tap a row to check it off. Resets on reload — no pressure.',
+
+    'search.label': 'Find something specific',
+    'search.placeholder': 'Try "frozen pipes", "smoke detector", or "gutters"…',
+    'search.empty': 'No modules match that. Try a different word.',
+    'search.count.one': 'result',
+    'search.count.many': 'results',
+
+    'categories.title': 'Browse by category',
+    'categories.subtitle': '38 modules across the parts of your home that need attention most.',
+    'categories.modules.one': 'module',
+    'categories.modules.many': 'modules',
+
+    'sample.eyebrow': 'Preview',
+    'sample.title': 'How a module looks',
+    'sample.subtitle': 'Large pictures, short text. Built for anyone, in English or Spanish.',
+    'sample.prev': 'Back',
+    'sample.next': 'Next',
+    'sample.step': 'Step',
+    'sample.of': 'of',
+    'sample.tip': 'Tip',
+
+    'library.title': 'Full module library',
+    'library.subtitle': 'Every module, grouped by category. Click to preview the design.',
+    'library.badge.steps': 'Step-by-step',
+    'library.badge.drag': 'Interactive',
+    'library.badge.checklist': 'Checklist',
+    'library.minutes': 'min',
+
+    'philosophy.eyebrow': 'How it works',
+    'philosophy.title': 'Built around real families.',
+    'philosophy.p1.title': 'Do it as you need',
+    'philosophy.p1.body': 'No locked modules. No progress bars. Return when something breaks or the seasons change.',
+    'philosophy.p2.title': 'Visual-first',
+    'philosophy.p2.body': 'Large illustrations, minimal text per step. Readable for everyone, regardless of literacy level.',
+    'philosophy.p3.title': 'Bilingual by default',
+    'philosophy.p3.body': 'Every screen, every step, in English or Spanish. Your language preference stays with you.',
+    'philosophy.p4.title': 'No account, no cost',
+    'philosophy.p4.body': 'Static-deployable, free to host. Community volunteers can update content without touching code.',
+
+    'emergency.eyebrow': 'Urgent',
+    'emergency.title': 'Something is wrong right now.',
+    'emergency.subtitle': 'Tap the tile that matches what is happening. We will take you to the fastest answer.',
+
+    'about.eyebrow': 'About this project',
+    'about.title': 'Made with Habitat for Humanity Omaha.',
+    'about.body': 'This guide was designed alongside the families it serves. Content was written with Habitat staff, translated with community volunteers, and built by student developers at the University of Nebraska. Version 1.0 — April 2026.',
+    'about.values.1': 'Free forever',
+    'about.values.2': 'Works offline',
+    'about.values.3': 'Community-owned content',
+
+    'footer.tag': 'Habitat for Humanity Omaha — Home Guide',
+    'footer.built': 'Built by student volunteers.',
+    'footer.version': 'Version 1.0 · 2026'
+  },
+  es: {
+    'nav.brand': 'Guía del Hogar HFH Omaha',
+    'nav.categories': 'Categorías',
+    'nav.library': 'Todos los módulos',
+    'nav.seasonal': 'Este mes',
+    'nav.about': 'Acerca de',
+    'lang.toggle': 'English',
+    'lang.toggle.aria': 'Cambiar a inglés',
+
+    'hero.eyebrow': 'Bienvenido a casa',
+    'hero.title': 'Tu hogar, explicado con pasos simples.',
+    'hero.subtitle': 'Una guía amigable para el hogar que tanto trabajaste para tener. Navega libremente — sin módulos que terminar ni progreso que seguir.',
+    'hero.cta.browse': 'Ver categorías',
+    'hero.cta.seasonal': 'Qué hacer este mes',
+    'hero.badge.modules': 'módulos',
+    'hero.badge.categories': 'categorías',
+    'hero.badge.languages': 'idiomas',
+
+    'seasonal.title': 'Este mes en tu hogar',
+    'seasonal.subtitle': 'Pequeñas cosas que mantienen un hogar funcionando bien.',
+    'seasonal.hint': 'Toca una fila para marcarla. Se reinicia al recargar — sin presión.',
+
+    'search.label': 'Busca algo específico',
+    'search.placeholder': 'Prueba "tuberías congeladas", "detector de humo" o "canaletas"…',
+    'search.empty': 'Ningún módulo coincide. Prueba con otra palabra.',
+    'search.count.one': 'resultado',
+    'search.count.many': 'resultados',
+
+    'categories.title': 'Navega por categoría',
+    'categories.subtitle': '38 módulos en las partes de tu hogar que más atención necesitan.',
+    'categories.modules.one': 'módulo',
+    'categories.modules.many': 'módulos',
+
+    'sample.eyebrow': 'Vista previa',
+    'sample.title': 'Así se ve un módulo',
+    'sample.subtitle': 'Imágenes grandes, texto corto. Hecho para cualquiera, en inglés o español.',
+    'sample.prev': 'Atrás',
+    'sample.next': 'Siguiente',
+    'sample.step': 'Paso',
+    'sample.of': 'de',
+    'sample.tip': 'Consejo',
+
+    'library.title': 'Biblioteca completa de módulos',
+    'library.subtitle': 'Todos los módulos, agrupados por categoría. Haz clic para ver el diseño.',
+    'library.badge.steps': 'Paso a paso',
+    'library.badge.drag': 'Interactivo',
+    'library.badge.checklist': 'Lista',
+    'library.minutes': 'min',
+
+    'philosophy.eyebrow': 'Cómo funciona',
+    'philosophy.title': 'Pensado para familias reales.',
+    'philosophy.p1.title': 'Hazlo cuando lo necesites',
+    'philosophy.p1.body': 'Sin módulos bloqueados. Sin barras de progreso. Vuelve cuando algo se rompa o cambie la temporada.',
+    'philosophy.p2.title': 'Primero visual',
+    'philosophy.p2.body': 'Ilustraciones grandes, texto corto en cada paso. Legible para todos, sin importar el nivel de lectura.',
+    'philosophy.p3.title': 'Bilingüe por defecto',
+    'philosophy.p3.body': 'Cada pantalla, cada paso, en inglés o español. Tu preferencia de idioma se queda contigo.',
+    'philosophy.p4.title': 'Sin cuenta, sin costo',
+    'philosophy.p4.body': 'Despliegue estático, gratis de hospedar. Los voluntarios actualizan contenido sin tocar código.',
+
+    'emergency.eyebrow': 'Urgente',
+    'emergency.title': 'Algo está mal ahora mismo.',
+    'emergency.subtitle': 'Toca la imagen que coincide con lo que pasa. Te llevamos a la respuesta más rápida.',
+
+    'about.eyebrow': 'Sobre este proyecto',
+    'about.title': 'Hecho con Habitat for Humanity Omaha.',
+    'about.body': 'Esta guía fue diseñada junto a las familias a las que sirve. El contenido se escribió con personal de Habitat, se tradujo con voluntarios de la comunidad y fue construido por estudiantes de la Universidad de Nebraska. Versión 1.0 — Abril 2026.',
+    'about.values.1': 'Gratis para siempre',
+    'about.values.2': 'Funciona sin internet',
+    'about.values.3': 'Contenido de la comunidad',
+
+    'footer.tag': 'Habitat for Humanity Omaha — Guía del Hogar',
+    'footer.built': 'Construida por estudiantes voluntarios.',
+    'footer.version': 'Versión 1.0 · 2026'
+  }
+};
