@@ -18,6 +18,8 @@ This project uses a **two-branch model**:
 
 **Feature branches are not used on this project.** Everyone works directly on `develop` and follows the pull-before-push rule in Section 3 to stay in sync.
 
+Day-to-day work stays on `develop`. `main` is updated only periodically — when the team decides `develop` is stable and it's time to push a new version of the live site.
+
 ---
 
 ## 2. Default Working Branch
@@ -55,9 +57,17 @@ If `git pull --rebase` produces conflicts, **stop and resolve them carefully** b
 
 ---
 
-## 4. Merging to Main (Deployment)
+## 4. Releasing to Main
 
 Code moves from `develop` → `main` **only via pull request with at least one review**.
+
+### When to release
+Releases happen occasionally, not after every push to `develop`. Open a `develop → main` PR only when:
+- The team has agreed it's time to deploy
+- `develop` has accumulated a stable set of tested changes
+- Someone explicitly asks for a release
+
+**Claude Code should not open a `main` PR unprompted** just because `develop` has new commits. Keep pushes focused on `develop` and wait for explicit direction to release.
 
 ### Steps:
 1. Ensure `develop` is stable and tested
