@@ -32,10 +32,16 @@ function renderLibrary() {
   if (!root) return;
   const lang = getLang();
 
+  const openSet = new Set(
+    Array.from(root.querySelectorAll('.library-section.is-open'))
+      .map(el => el.dataset.catId)
+  );
+
   root.innerHTML = CATEGORIES.map(cat => {
     const mods = MODULES.filter(m => m.category === cat.id);
     const name = cat[`name_${lang}`];
     const blurb = cat[`blurb_${lang}`];
+    const isOpen = openSet.has(cat.id);
 
     const cards = mods.map(m => {
       const title = m[`title_${lang}`];
@@ -52,17 +58,26 @@ function renderLibrary() {
       `;
     }).join('');
 
+    const panelId = `library-panel-${cat.id}`;
     return `
-      <section class="library-section" id="library-${cat.id}">
-        <header class="library-section-header">
+      <section class="library-section ${isOpen ? 'is-open' : ''}" id="library-${cat.id}" data-cat-id="${cat.id}">
+        <button
+          type="button"
+          class="library-section-header"
+          aria-expanded="${isOpen ? 'true' : 'false'}"
+          aria-controls="${panelId}"
+          data-library-toggle>
           <span class="library-section-icon" aria-hidden="true">${cat.icon}</span>
-          <div>
+          <div class="library-section-text">
             <h3 class="library-section-title">${escapeHtml(name)}</h3>
             <p class="library-section-blurb">${escapeHtml(blurb)}</p>
           </div>
           <span class="library-section-count">${mods.length}</span>
-        </header>
-        <div class="module-grid">
+          <span class="library-section-chevron" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </span>
+        </button>
+        <div class="module-grid" id="${panelId}">
           ${cards}
         </div>
       </section>

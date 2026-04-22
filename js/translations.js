@@ -30,8 +30,9 @@ const TRANSLATIONS = {
     'search.count.one': 'result',
     'search.count.many': 'results',
 
-    'categories.title': 'Browse by category',
+    'categories.title': 'Start here · Browse by category',
     'categories.subtitle': '39 modules across the parts of your home that need attention most.',
+    'categories.hint': 'Pick the area you want to explore — each card opens that part of the library below.',
     'categories.modules.one': 'module',
     'categories.modules.many': 'modules',
 
@@ -46,10 +47,16 @@ const TRANSLATIONS = {
 
     'library.title': 'Full module library',
     'library.subtitle': 'Every module, grouped by category. Click any card to watch the video.',
+    'library.hint': 'Tap a category to open it. All categories start closed so the list stays manageable.',
+    'library.expandAll': 'Expand all',
+    'library.collapseAll': 'Collapse all',
     'library.badge.steps': 'Step-by-step',
     'library.badge.drag': 'Interactive',
     'library.badge.checklist': 'Checklist',
     'library.minutes': 'min',
+
+    'backtotop.label': 'Top',
+    'backtotop.aria': 'Back to top',
 
     'module.back': 'Back',
     'module.steps.title': 'Step-by-step',
@@ -116,8 +123,9 @@ const TRANSLATIONS = {
     'search.count.one': 'resultado',
     'search.count.many': 'resultados',
 
-    'categories.title': 'Navega por categoría',
+    'categories.title': 'Empieza aquí · Navega por categoría',
     'categories.subtitle': '39 módulos en las partes de tu hogar que más atención necesitan.',
+    'categories.hint': 'Elige el área que quieres explorar — cada tarjeta abre esa parte de la biblioteca abajo.',
     'categories.modules.one': 'módulo',
     'categories.modules.many': 'módulos',
 
@@ -132,10 +140,16 @@ const TRANSLATIONS = {
 
     'library.title': 'Biblioteca completa de módulos',
     'library.subtitle': 'Todos los módulos, agrupados por categoría. Haz clic en cualquier tarjeta para ver el video.',
+    'library.hint': 'Toca una categoría para abrirla. Todas empiezan cerradas para que la lista sea manejable.',
+    'library.expandAll': 'Expandir todo',
+    'library.collapseAll': 'Contraer todo',
     'library.badge.steps': 'Paso a paso',
     'library.badge.drag': 'Interactivo',
     'library.badge.checklist': 'Lista',
     'library.minutes': 'min',
+
+    'backtotop.label': 'Arriba',
+    'backtotop.aria': 'Volver arriba',
 
     'module.back': 'Volver',
     'module.steps.title': 'Paso a paso',

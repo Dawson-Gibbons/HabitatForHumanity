@@ -210,8 +210,9 @@
     <section class="section" id="categories">
       <div class="container">
         <div class="section-head" data-reveal>
-          <span class="eyebrow" data-i18n="categories.title">Browse by category</span>
+          <span class="eyebrow eyebrow--starthere" data-i18n="categories.title">Start here · Browse by category</span>
           <h2 class="section-title" data-i18n="categories.subtitle">39 modules across the parts of your home that need attention most.</h2>
+          <p class="section-subtitle" data-i18n="categories.hint">Pick the area you want to explore — each card opens that part of the library below.</p>
         </div>
         <div class="categories-grid" id="category-grid" data-reveal>
           <!-- populated by render.js -->
@@ -225,6 +226,11 @@
         <div class="section-head" data-reveal>
           <span class="eyebrow" data-i18n="library.title">Full module library</span>
           <h2 class="section-title" data-i18n="library.subtitle">Every module, grouped by category. Click to preview the design.</h2>
+          <p class="section-subtitle" data-i18n="library.hint">Tap a category to open it. All categories start closed so the list stays manageable.</p>
+        </div>
+        <div class="library-controls" data-reveal>
+          <button type="button" class="library-control-btn" id="library-expand-all" data-i18n="library.expandAll">Expand all</button>
+          <button type="button" class="library-control-btn" id="library-collapse-all" data-i18n="library.collapseAll">Collapse all</button>
         </div>
         <div class="library-sections" id="library-root" data-reveal>
           <!-- populated by render.js -->
@@ -255,6 +261,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top" data-i18n-attr="aria-label:backtotop.aria">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+    <span class="back-to-top-label" data-i18n="backtotop.label">Top</span>
+  </button>
 
   <!-- ============ VIDEO MODAL ============ -->
   <div id="video-modal" class="modal-overlay" aria-modal="true" role="dialog" aria-labelledby="modal-title">

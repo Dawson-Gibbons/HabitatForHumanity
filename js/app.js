@@ -27,10 +27,64 @@ function initSmoothScroll() {
     const target = document.getElementById(id);
     if (!target) return;
     e.preventDefault();
+    if (target.classList.contains('library-section')) {
+      openLibrarySection(target);
+    }
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     // close the search panel after a jump
     const results = document.getElementById('search-results');
     if (results) results.classList.remove('is-active');
+  });
+}
+
+function openLibrarySection(section) {
+  if (!section || section.classList.contains('is-open')) return;
+  const btn = section.querySelector('[data-library-toggle]');
+  section.classList.add('is-open');
+  if (btn) btn.setAttribute('aria-expanded', 'true');
+}
+
+function initLibraryToggles() {
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-library-toggle]');
+    if (!btn) return;
+    const section = btn.closest('.library-section');
+    if (!section) return;
+    const isOpen = section.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  const expandAll = document.getElementById('library-expand-all');
+  const collapseAll = document.getElementById('library-collapse-all');
+  if (expandAll) {
+    expandAll.addEventListener('click', () => {
+      document.querySelectorAll('.library-section').forEach(section => {
+        openLibrarySection(section);
+      });
+    });
+  }
+  if (collapseAll) {
+    collapseAll.addEventListener('click', () => {
+      document.querySelectorAll('.library-section.is-open').forEach(section => {
+        const btn = section.querySelector('[data-library-toggle]');
+        section.classList.remove('is-open');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+}
+
+function initBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  const toggle = () => {
+    if (window.scrollY > 600) btn.classList.add('is-visible');
+    else btn.classList.remove('is-visible');
+  };
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
 
@@ -146,6 +200,8 @@ function boot() {
   renderAll();
   initReveal();
   initModuleModal();
+  initLibraryToggles();
+  initBackToTop();
 
   document.addEventListener('lang:change', () => {
     renderSeasonal();
