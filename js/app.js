@@ -4,7 +4,6 @@ function renderAll() {
   applyTranslations();
   renderSeasonal();
   renderCategoryGrid();
-  renderLibrary();
   updateLangToggleFace();
 }
 
@@ -27,8 +26,8 @@ function initSmoothScroll() {
     const target = document.getElementById(id);
     if (!target) return;
     e.preventDefault();
-    if (target.classList.contains('library-section')) {
-      openLibrarySection(target);
+    if (target.classList.contains('category-card')) {
+      openCategoryCard(target);
     }
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     // close the search panel after a jump
@@ -37,20 +36,20 @@ function initSmoothScroll() {
   });
 }
 
-function openLibrarySection(section) {
-  if (!section || section.classList.contains('is-open')) return;
-  const btn = section.querySelector('[data-library-toggle]');
-  section.classList.add('is-open');
+function openCategoryCard(card) {
+  if (!card || card.classList.contains('is-open')) return;
+  const btn = card.querySelector('[data-category-toggle]');
+  card.classList.add('is-open');
   if (btn) btn.setAttribute('aria-expanded', 'true');
 }
 
-function initLibraryToggles() {
+function initCategoryToggles() {
   document.addEventListener('click', e => {
-    const btn = e.target.closest('[data-library-toggle]');
+    const btn = e.target.closest('[data-category-toggle]');
     if (!btn) return;
-    const section = btn.closest('.library-section');
-    if (!section) return;
-    const isOpen = section.classList.toggle('is-open');
+    const card = btn.closest('.category-card');
+    if (!card) return;
+    const isOpen = card.classList.toggle('is-open');
     btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
@@ -58,16 +57,16 @@ function initLibraryToggles() {
   const collapseAll = document.getElementById('library-collapse-all');
   if (expandAll) {
     expandAll.addEventListener('click', () => {
-      document.querySelectorAll('.library-section').forEach(section => {
-        openLibrarySection(section);
+      document.querySelectorAll('.category-card').forEach(card => {
+        openCategoryCard(card);
       });
     });
   }
   if (collapseAll) {
     collapseAll.addEventListener('click', () => {
-      document.querySelectorAll('.library-section.is-open').forEach(section => {
-        const btn = section.querySelector('[data-library-toggle]');
-        section.classList.remove('is-open');
+      document.querySelectorAll('.category-card.is-open').forEach(card => {
+        const btn = card.querySelector('[data-category-toggle]');
+        card.classList.remove('is-open');
         if (btn) btn.setAttribute('aria-expanded', 'false');
       });
     });
@@ -200,13 +199,12 @@ function boot() {
   renderAll();
   initReveal();
   initModuleModal();
-  initLibraryToggles();
+  initCategoryToggles();
   initBackToTop();
 
   document.addEventListener('lang:change', () => {
     renderSeasonal();
     renderCategoryGrid();
-    renderLibrary();
     updateLangToggleFace();
   });
 }

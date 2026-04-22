@@ -6,42 +6,19 @@ function renderCategoryGrid() {
   if (!grid) return;
   const lang = getLang();
 
-  grid.innerHTML = CATEGORIES.map((cat, i) => {
-    const count = MODULES.filter(m => m.category === cat.id).length;
-    const name = cat[`name_${lang}`];
-    const blurb = cat[`blurb_${lang}`];
-    const word = count === 1 ? t('categories.modules.one', lang) : t('categories.modules.many', lang);
-    return `
-      <a href="#library-${cat.id}" class="category-card" style="--stagger:${i * 60}ms">
-        <div class="category-card-icon" aria-hidden="true">${cat.icon}</div>
-        <div class="category-card-body">
-          <h3 class="category-card-title">${escapeHtml(name)}</h3>
-          <p class="category-card-blurb">${escapeHtml(blurb)}</p>
-        </div>
-        <div class="category-card-foot">
-          <span class="category-card-count">${count} ${word}</span>
-          <span class="category-card-arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
-    `;
-  }).join('');
-}
-
-function renderLibrary() {
-  const root = document.getElementById('library-root');
-  if (!root) return;
-  const lang = getLang();
-
   const openSet = new Set(
-    Array.from(root.querySelectorAll('.library-section.is-open'))
+    Array.from(grid.querySelectorAll('.category-card.is-open'))
       .map(el => el.dataset.catId)
   );
 
-  root.innerHTML = CATEGORIES.map(cat => {
+  grid.innerHTML = CATEGORIES.map((cat, i) => {
     const mods = MODULES.filter(m => m.category === cat.id);
+    const count = mods.length;
     const name = cat[`name_${lang}`];
     const blurb = cat[`blurb_${lang}`];
+    const word = count === 1 ? t('categories.modules.one', lang) : t('categories.modules.many', lang);
     const isOpen = openSet.has(cat.id);
+    const panelId = `category-panel-${cat.id}`;
 
     const cards = mods.map(m => {
       const title = m[`title_${lang}`];
@@ -58,26 +35,27 @@ function renderLibrary() {
       `;
     }).join('');
 
-    const panelId = `library-panel-${cat.id}`;
     return `
-      <section class="library-section ${isOpen ? 'is-open' : ''}" id="library-${cat.id}" data-cat-id="${cat.id}">
+      <section class="category-card ${isOpen ? 'is-open' : ''}" id="library-${cat.id}" data-cat-id="${cat.id}" style="--stagger:${i * 60}ms">
         <button
           type="button"
-          class="library-section-header"
+          class="category-card-header"
           aria-expanded="${isOpen ? 'true' : 'false'}"
           aria-controls="${panelId}"
-          data-library-toggle>
-          <span class="library-section-icon" aria-hidden="true">${cat.icon}</span>
-          <div class="library-section-text">
-            <h3 class="library-section-title">${escapeHtml(name)}</h3>
-            <p class="library-section-blurb">${escapeHtml(blurb)}</p>
+          data-category-toggle>
+          <div class="category-card-icon" aria-hidden="true">${cat.icon}</div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">${escapeHtml(name)}</h3>
+            <p class="category-card-blurb">${escapeHtml(blurb)}</p>
           </div>
-          <span class="library-section-count">${mods.length}</span>
-          <span class="library-section-chevron" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-          </span>
+          <div class="category-card-foot">
+            <span class="category-card-count">${count} ${word}</span>
+            <span class="category-card-chevron" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </div>
         </button>
-        <div class="module-grid" id="${panelId}">
+        <div class="category-card-panel module-grid" id="${panelId}">
           ${cards}
         </div>
       </section>

@@ -3,7 +3,7 @@
 
 const TRANSLATIONS = {
   en: {
-    'nav.brand': 'HFH Omaha Home Guide',
+    'nav.brand': 'Home Maintenance Guide',
     'nav.categories': 'Categories',
     'nav.library': 'All modules',
     'nav.seasonal': 'This month',
@@ -32,7 +32,7 @@ const TRANSLATIONS = {
 
     'categories.title': 'Start here · Browse by category',
     'categories.subtitle': '39 modules across the parts of your home that need attention most.',
-    'categories.hint': 'Pick the area you want to explore — each card opens that part of the library below.',
+    'categories.hint': 'Tap a card to open it. All categories start closed so the list stays manageable.',
     'categories.modules.one': 'module',
     'categories.modules.many': 'modules',
 
@@ -86,17 +86,17 @@ const TRANSLATIONS = {
 
     'about.eyebrow': 'About this project',
     'about.title': 'Made with Habitat for Humanity Omaha.',
-    'about.body': 'This guide was designed alongside the families it serves. Content was written with Habitat staff, translated with community volunteers, and built by student developers at the University of Nebraska. Version 1.0 — April 2026.',
+    'about.body': 'This guide was designed alongside the families it serves. Content was written with Habitat staff, translated with community volunteers, and built by student developers at the University of Nebraska. Version 1.6 — April 2026.',
     'about.values.1': 'Free forever',
     'about.values.2': 'Works offline',
     'about.values.3': 'Community-owned content',
 
     'footer.tag': 'Habitat for Humanity Omaha — Home Guide',
     'footer.built': 'Built by student volunteers.',
-    'footer.version': 'Version 1.0 · 2026'
+    'footer.version': 'Version 1.6 · 2026'
   },
   es: {
-    'nav.brand': 'Guía del Hogar HFH Omaha',
+    'nav.brand': 'Guía de Mantenimiento del Hogar',
     'nav.categories': 'Categorías',
     'nav.library': 'Todos los módulos',
     'nav.seasonal': 'Este mes',
@@ -125,7 +125,7 @@ const TRANSLATIONS = {
 
     'categories.title': 'Empieza aquí · Navega por categoría',
     'categories.subtitle': '39 módulos en las partes de tu hogar que más atención necesitan.',
-    'categories.hint': 'Elige el área que quieres explorar — cada tarjeta abre esa parte de la biblioteca abajo.',
+    'categories.hint': 'Toca una tarjeta para abrirla. Todas empiezan cerradas para que la lista sea manejable.',
     'categories.modules.one': 'módulo',
     'categories.modules.many': 'módulos',
 
@@ -179,13 +179,13 @@ const TRANSLATIONS = {
 
     'about.eyebrow': 'Sobre este proyecto',
     'about.title': 'Hecho con Habitat for Humanity Omaha.',
-    'about.body': 'Esta guía fue diseñada junto a las familias a las que sirve. El contenido se escribió con personal de Habitat, se tradujo con voluntarios de la comunidad y fue construido por estudiantes de la Universidad de Nebraska. Versión 1.0 — Abril 2026.',
+    'about.body': 'Esta guía fue diseñada junto a las familias a las que sirve. El contenido se escribió con personal de Habitat, se tradujo con voluntarios de la comunidad y fue construido por estudiantes de la Universidad de Nebraska. Versión 1.6 — Abril 2026.',
     'about.values.1': 'Gratis para siempre',
     'about.values.2': 'Funciona sin internet',
     'about.values.3': 'Contenido de la comunidad',
 
     'footer.tag': 'Habitat for Humanity Omaha — Guía del Hogar',
     'footer.built': 'Construida por estudiantes voluntarios.',
-    'footer.version': 'Versión 1.0 · 2026'
+    'footer.version': 'Versión 1.6 · 2026'
   }
 };
