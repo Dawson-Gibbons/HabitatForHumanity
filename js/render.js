@@ -27,12 +27,6 @@ function renderCategoryGrid() {
   }).join('');
 }
 
-function typeBadgeKey(type) {
-  if (type === 'drag-scene') return 'library.badge.drag';
-  if (type === 'checklist') return 'library.badge.checklist';
-  return 'library.badge.steps';
-}
-
 function renderLibrary() {
   const root = document.getElementById('library-root');
   if (!root) return;
@@ -46,13 +40,8 @@ function renderLibrary() {
     const cards = mods.map(m => {
       const title = m[`title_${lang}`];
       const summary = m[`summary_${lang}`];
-      const badge = t(typeBadgeKey(m.type), lang);
       return `
         <button type="button" class="module-card module-card--${m.type}" data-module-id="${m.id}">
-          <div class="module-card-type">
-            <span class="module-type-dot" aria-hidden="true"></span>
-            ${escapeHtml(badge)}
-          </div>
           <h4 class="module-card-title">${escapeHtml(title)}</h4>
           <p class="module-card-summary">${escapeHtml(summary)}</p>
           <div class="module-card-meta">

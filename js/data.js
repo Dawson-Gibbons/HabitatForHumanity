@@ -416,6 +416,192 @@ const EMERGENCIES = [
 // back to a "coming soon" block on their detail page. The landing-page
 // preview (#sample) reads water-shutoff via SAMPLE_STEPS below.
 const MODULE_STEPS = {
+  'furnace-filter': {
+    en: {
+      title: 'Furnace Filter Replacement',
+      intro: 'A fresh filter keeps your air clean and helps your furnace run efficiently. Check monthly and replace at least every three months.',
+      steps: [
+        {
+          headline: 'Turn off the furnace',
+          body: 'Switch the thermostat to Off, or flip the power switch on the side of the furnace. This keeps the blower from pulling dust while the filter is out.',
+          illustration: '🔌',
+          tip: 'If you cannot find a switch, turn off the breaker labeled "Furnace" in your electrical panel.'
+        },
+        {
+          headline: 'Find and remove the old filter',
+          body: 'The filter sits in a slot on the side of the furnace or inside the return air grille on a wall or ceiling. Slide the old filter straight out.',
+          illustration: '🔍',
+          tip: 'Write the size printed on the cardboard frame on your phone before you head to the store.'
+        },
+        {
+          headline: 'Check the airflow arrow',
+          body: 'Every filter has an arrow on its edge. That arrow must point toward the furnace — the direction air is traveling into the blower.',
+          illustration: '➡️',
+          tip: 'If you install it backward, the filter will not trap dust properly and may collapse.'
+        },
+        {
+          headline: 'Slide in the new filter',
+          body: 'Push the new filter all the way into the slot with the arrow pointing the right way. Close the cover and turn the furnace back on.',
+          illustration: '✅',
+          tip: 'Write today\'s date on the filter frame with a marker so you know when to change it next.'
+        }
+      ]
+    },
+    es: {
+      title: 'Reemplazo del Filtro de la Caldera',
+      intro: 'Un filtro nuevo mantiene tu aire limpio y ayuda a que tu caldera funcione eficientemente. Revísalo cada mes y cámbialo al menos cada tres meses.',
+      steps: [
+        {
+          headline: 'Apaga la caldera',
+          body: 'Pon el termostato en Off, o apaga el interruptor al lado de la caldera. Esto evita que el ventilador jale polvo mientras el filtro está afuera.',
+          illustration: '🔌',
+          tip: 'Si no encuentras un interruptor, apaga el breaker marcado "Furnace" en tu caja de breakers.'
+        },
+        {
+          headline: 'Encuentra y saca el filtro viejo',
+          body: 'El filtro está en una ranura al lado de la caldera o dentro de la rejilla de retorno en una pared o techo. Jala el filtro viejo hacia afuera.',
+          illustration: '🔍',
+          tip: 'Apunta el tamaño impreso en el marco de cartón en tu teléfono antes de ir a la tienda.'
+        },
+        {
+          headline: 'Revisa la flecha de flujo de aire',
+          body: 'Todo filtro tiene una flecha en el borde. Esa flecha debe apuntar hacia la caldera — la dirección en que el aire entra al ventilador.',
+          illustration: '➡️',
+          tip: 'Si lo pones al revés, no atrapará el polvo bien y podría colapsarse.'
+        },
+        {
+          headline: 'Coloca el filtro nuevo',
+          body: 'Empuja el filtro nuevo hasta el fondo con la flecha en la dirección correcta. Cierra la tapa y prende la caldera otra vez.',
+          illustration: '✅',
+          tip: 'Escribe la fecha de hoy en el marco del filtro con un marcador para saber cuándo cambiarlo.'
+        }
+      ]
+    }
+  },
+  'thermostat-basics': {
+    en: {
+      title: 'Thermostat Basics',
+      intro: 'Your thermostat controls heating and cooling. Learning a few settings can keep you comfortable and cut your energy bill.',
+      steps: [
+        {
+          headline: 'Set the date and time',
+          body: 'Before anything else, set the current date and time. Your thermostat uses this to follow a schedule and switch between day and night temperatures.',
+          illustration: '⏰',
+          tip: 'Check the time again after a power outage — some thermostats reset.'
+        },
+        {
+          headline: 'Pick heat, cool, or auto mode',
+          body: 'Heat runs the furnace. Cool runs the AC. Auto lets the thermostat switch between them based on the room temperature.',
+          illustration: '🌡️',
+          tip: 'Use Auto year-round if the weather swings between warm and cold in the same week.'
+        },
+        {
+          headline: 'Choose a comfortable temperature',
+          body: 'In winter, aim for 68°F when you are home and awake. In summer, set it as high as is comfortable. Lower the heat or raise the AC when you sleep or leave.',
+          illustration: '🏠',
+          tip: 'Dropping the thermostat 7–10°F for 8 hours a day can save about 10% on your energy bill.'
+        },
+        {
+          headline: 'Use the schedule (if programmable)',
+          body: 'A programmable thermostat lets you set different temperatures for morning, day, evening, and night. Set it once and it adjusts for you.',
+          illustration: '📅',
+          tip: 'The "Hold" button pauses the schedule — useful on weekends or when sick at home.'
+        }
+      ]
+    },
+    es: {
+      title: 'Conceptos Básicos del Termostato',
+      intro: 'Tu termostato controla la calefacción y el aire acondicionado. Aprender unas cuantas configuraciones te mantiene cómodo y baja tu factura de energía.',
+      steps: [
+        {
+          headline: 'Configura la fecha y la hora',
+          body: 'Antes de todo, configura la fecha y la hora actuales. El termostato las usa para seguir un horario y cambiar entre temperaturas de día y de noche.',
+          illustration: '⏰',
+          tip: 'Revisa la hora de nuevo después de un apagón — algunos termostatos se reinician.'
+        },
+        {
+          headline: 'Elige modo calor, frío o auto',
+          body: 'Calor (Heat) prende la caldera. Frío (Cool) prende el aire. Auto cambia entre los dos según la temperatura del cuarto.',
+          illustration: '🌡️',
+          tip: 'Usa Auto todo el año si el clima cambia entre calor y frío en la misma semana.'
+        },
+        {
+          headline: 'Escoge una temperatura cómoda',
+          body: 'En invierno, 68°F cuando estés despierto en casa. En verano, lo más alto que sea cómodo. Bájale al calor o súbele al aire cuando duermas o salgas.',
+          illustration: '🏠',
+          tip: 'Bajar el termostato 7–10°F por 8 horas al día puede ahorrar cerca del 10% en tu factura.'
+        },
+        {
+          headline: 'Usa el horario (si es programable)',
+          body: 'Un termostato programable te deja poner temperaturas distintas para la mañana, tarde, noche y madrugada. Lo programas una vez y él ajusta solo.',
+          illustration: '📅',
+          tip: 'El botón "Hold" pausa el horario — útil en fines de semana o cuando estás enfermo en casa.'
+        }
+      ]
+    }
+  },
+  'air-vents': {
+    en: {
+      title: 'Air Vents — Cleaning & Unblocking',
+      intro: 'Dusty or blocked vents make your furnace and AC work harder. A quick clean every few months keeps air flowing freely.',
+      steps: [
+        {
+          headline: 'Turn off the HVAC system',
+          body: 'Set your thermostat to Off before you remove any vent covers. This keeps the blower from pulling dust into the ducts while you work.',
+          illustration: '🔌',
+          tip: 'Wait a minute after turning it off so the blower fully stops.'
+        },
+        {
+          headline: 'Remove the vent covers',
+          body: 'Unscrew the grille covers on the wall, ceiling, or floor. Keep the screws in a small dish so you do not lose them.',
+          illustration: '🔩',
+          tip: 'Take a photo of each vent before you remove it — makes lining it up easier when you put it back.'
+        },
+        {
+          headline: 'Wash the covers and vacuum inside',
+          body: 'Soak the covers in warm soapy water, scrub with a sponge, and dry them off. Use a vacuum hose with a brush attachment to clean as far into the duct as you can reach.',
+          illustration: '🧽',
+          tip: 'A long-handled dust brush reaches where the vacuum hose will not.'
+        },
+        {
+          headline: 'Reinstall and clear the path',
+          body: 'Put the dry covers back on. Check that no rugs, furniture, or curtains are blocking the vents in any room.',
+          illustration: '🪑',
+          tip: 'Blocked vents can trip your furnace\'s safety sensor and shut it down on cold nights.'
+        }
+      ]
+    },
+    es: {
+      title: 'Rejillas de Aire — Limpieza y Desbloqueo',
+      intro: 'Las rejillas sucias o bloqueadas hacen que la caldera y el aire trabajen más. Una limpieza rápida cada pocos meses mantiene el aire fluyendo.',
+      steps: [
+        {
+          headline: 'Apaga el sistema HVAC',
+          body: 'Pon el termostato en Off antes de quitar rejillas. Esto evita que el ventilador jale polvo mientras trabajas.',
+          illustration: '🔌',
+          tip: 'Espera un minuto después de apagarlo para que el ventilador se detenga por completo.'
+        },
+        {
+          headline: 'Quita las rejillas',
+          body: 'Desatornilla las cubiertas de las rejillas en paredes, techos o pisos. Guarda los tornillos en un plato chico para no perderlos.',
+          illustration: '🔩',
+          tip: 'Toma una foto de cada rejilla antes de quitarla — así es más fácil alinearla al ponerla de nuevo.'
+        },
+        {
+          headline: 'Lava las cubiertas y aspira adentro',
+          body: 'Remoja las cubiertas en agua tibia con jabón, frótalas con una esponja y sécalas. Usa la manguera de la aspiradora con cepillo para limpiar dentro del ducto lo más lejos posible.',
+          illustration: '🧽',
+          tip: 'Un cepillo de mango largo alcanza donde la aspiradora no llega.'
+        },
+        {
+          headline: 'Vuelve a poner y despeja el paso',
+          body: 'Coloca las cubiertas secas. Revisa que ningún tapete, mueble o cortina esté tapando las rejillas en los cuartos.',
+          illustration: '🪑',
+          tip: 'Las rejillas tapadas pueden activar el sensor de seguridad de la caldera y apagarla en noches frías.'
+        }
+      ]
+    }
+  },
   'water-shutoff': {
     en: {
       title: 'Water Main Shutoff',

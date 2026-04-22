@@ -5,8 +5,6 @@ function renderAll() {
   renderSeasonal();
   renderCategoryGrid();
   renderLibrary();
-  renderEmergency();
-  renderStepViewer();
   updateLangToggleFace();
 }
 
@@ -153,8 +151,6 @@ function boot() {
     renderSeasonal();
     renderCategoryGrid();
     renderLibrary();
-    renderEmergency();
-    renderStepViewer();
     updateLangToggleFace();
   });
 }
