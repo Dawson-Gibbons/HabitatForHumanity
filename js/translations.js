@@ -31,7 +31,7 @@ const TRANSLATIONS = {
     'search.count.many': 'results',
 
     'categories.title': 'Browse by category',
-    'categories.subtitle': '38 modules across the parts of your home that need attention most.',
+    'categories.subtitle': '39 modules across the parts of your home that need attention most.',
     'categories.modules.one': 'module',
     'categories.modules.many': 'modules',
 
@@ -117,7 +117,7 @@ const TRANSLATIONS = {
     'search.count.many': 'resultados',
 
     'categories.title': 'Navega por categoría',
-    'categories.subtitle': '38 módulos en las partes de tu hogar que más atención necesitan.',
+    'categories.subtitle': '39 módulos en las partes de tu hogar que más atención necesitan.',
     'categories.modules.one': 'módulo',
     'categories.modules.many': 'módulos',
 
