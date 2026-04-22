@@ -31,7 +31,7 @@ const TRANSLATIONS = {
     'search.count.many': 'results',
 
     'categories.title': 'Browse by category',
-    'categories.subtitle': '39 modules across the parts of your home that need attention most.',
+    'categories.subtitle': '38 modules across the parts of your home that need attention most.',
     'categories.modules.one': 'module',
     'categories.modules.many': 'modules',
 
@@ -45,7 +45,7 @@ const TRANSLATIONS = {
     'sample.tip': 'Tip',
 
     'library.title': 'Full module library',
-    'library.subtitle': 'Every module, grouped by category. Click any card to watch the video.',
+    'library.subtitle': 'Every module, grouped by category. Click any module to open its page.',
     'library.badge.steps': 'Step-by-step',
     'library.badge.drag': 'Interactive',
     'library.badge.checklist': 'Checklist',
@@ -117,7 +117,7 @@ const TRANSLATIONS = {
     'search.count.many': 'resultados',
 
     'categories.title': 'Navega por categoría',
-    'categories.subtitle': '39 módulos en las partes de tu hogar que más atención necesitan.',
+    'categories.subtitle': '38 módulos en las partes de tu hogar que más atención necesitan.',
     'categories.modules.one': 'módulo',
     'categories.modules.many': 'módulos',
 
@@ -131,22 +131,11 @@ const TRANSLATIONS = {
     'sample.tip': 'Consejo',
 
     'library.title': 'Biblioteca completa de módulos',
-    'library.subtitle': 'Todos los módulos, agrupados por categoría. Haz clic en cualquier tarjeta para ver el video.',
+    'library.subtitle': 'Todos los módulos, agrupados por categoría. Haz clic para ver el diseño.',
     'library.badge.steps': 'Paso a paso',
     'library.badge.drag': 'Interactivo',
     'library.badge.checklist': 'Lista',
     'library.minutes': 'min',
-
-    'module.back': 'Volver',
-    'module.steps.title': 'Paso a paso',
-    'module.youtube.label': 'Ver en YouTube',
-    'module.youtube.sub': 'Abre una búsqueda de YouTube sobre este tema en una nueva pestaña.',
-    'module.topics': 'Temas',
-    'module.coming.title': 'Próximamente pasos detallados',
-    'module.coming.body': 'Por ahora, el video de arriba cubre lo esencial. El contenido completo está siendo escrito con el personal de Habitat.',
-    'module.notfound.title': 'Módulo no encontrado',
-    'module.notfound.body': 'El módulo que buscas no existe. Navega por las categorías para encontrar lo que necesitas.',
-    'module.notfound.cta': 'Ver categorías',
 
     'philosophy.eyebrow': 'Cómo funciona',
     'philosophy.title': 'Pensado para familias reales.',

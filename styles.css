@@ -1162,8 +1162,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 /* ============================================================
-   Module card — button reset + play hint
-============================================================ */
 button.module-card {
   width: 100%;
   text-align: left;
@@ -1180,7 +1178,6 @@ button.module-card {
 
 /* ============================================================
    Video Modal
-============================================================ */
 .modal-overlay {
   position: fixed;
   inset: 0;
