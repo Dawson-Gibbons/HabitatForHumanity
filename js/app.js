@@ -4,7 +4,6 @@ function renderAll() {
   applyTranslations();
   renderSeasonal();
   renderCategoryGrid();
-  renderLibrary();
   updateLangToggleFace();
 }
 
@@ -27,10 +26,64 @@ function initSmoothScroll() {
     const target = document.getElementById(id);
     if (!target) return;
     e.preventDefault();
+    if (target.classList.contains('category-card')) {
+      openCategoryCard(target);
+    }
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     // close the search panel after a jump
     const results = document.getElementById('search-results');
     if (results) results.classList.remove('is-active');
+  });
+}
+
+function openCategoryCard(card) {
+  if (!card || card.classList.contains('is-open')) return;
+  const btn = card.querySelector('[data-category-toggle]');
+  card.classList.add('is-open');
+  if (btn) btn.setAttribute('aria-expanded', 'true');
+}
+
+function initCategoryToggles() {
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-category-toggle]');
+    if (!btn) return;
+    const card = btn.closest('.category-card');
+    if (!card) return;
+    const isOpen = card.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  const expandAll = document.getElementById('library-expand-all');
+  const collapseAll = document.getElementById('library-collapse-all');
+  if (expandAll) {
+    expandAll.addEventListener('click', () => {
+      document.querySelectorAll('.category-card').forEach(card => {
+        openCategoryCard(card);
+      });
+    });
+  }
+  if (collapseAll) {
+    collapseAll.addEventListener('click', () => {
+      document.querySelectorAll('.category-card.is-open').forEach(card => {
+        const btn = card.querySelector('[data-category-toggle]');
+        card.classList.remove('is-open');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+}
+
+function initBackToTop() {
+  const btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  const toggle = () => {
+    if (window.scrollY > 600) btn.classList.add('is-visible');
+    else btn.classList.remove('is-visible');
+  };
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
 
@@ -146,11 +199,12 @@ function boot() {
   renderAll();
   initReveal();
   initModuleModal();
+  initCategoryToggles();
+  initBackToTop();
 
   document.addEventListener('lang:change', () => {
     renderSeasonal();
     renderCategoryGrid();
-    renderLibrary();
     updateLangToggleFace();
   });
 }

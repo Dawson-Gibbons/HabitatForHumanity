@@ -3,7 +3,7 @@
 
 const TRANSLATIONS = {
   en: {
-    'nav.brand': 'HFH Omaha Home Guide',
+    'nav.brand': 'Home Maintenance Guide',
     'nav.categories': 'Categories',
     'nav.library': 'All modules',
     'nav.seasonal': 'This month',
@@ -30,8 +30,9 @@ const TRANSLATIONS = {
     'search.count.one': 'result',
     'search.count.many': 'results',
 
-    'categories.title': 'Browse by category',
+    'categories.title': 'Start here · Browse by category',
     'categories.subtitle': '39 modules across the parts of your home that need attention most.',
+    'categories.hint': 'Tap a card to open it. All categories start closed so the list stays manageable.',
     'categories.modules.one': 'module',
     'categories.modules.many': 'modules',
 
@@ -46,10 +47,16 @@ const TRANSLATIONS = {
 
     'library.title': 'Full module library',
     'library.subtitle': 'Every module, grouped by category. Click any card to watch the video.',
+    'library.hint': 'Tap a category to open it. All categories start closed so the list stays manageable.',
+    'library.expandAll': 'Expand all',
+    'library.collapseAll': 'Collapse all',
     'library.badge.steps': 'Step-by-step',
     'library.badge.drag': 'Interactive',
     'library.badge.checklist': 'Checklist',
     'library.minutes': 'min',
+
+    'backtotop.label': 'Top',
+    'backtotop.aria': 'Back to top',
 
     'module.back': 'Back',
     'module.steps.title': 'Step-by-step',
@@ -79,17 +86,17 @@ const TRANSLATIONS = {
 
     'about.eyebrow': 'About this project',
     'about.title': 'Made with Habitat for Humanity Omaha.',
-    'about.body': 'This guide was designed alongside the families it serves. Content was written with Habitat staff, translated with community volunteers, and built by student developers at the University of Nebraska. Version 1.0 — April 2026.',
+    'about.body': 'This guide was designed alongside the families it serves. Content was written with Habitat staff, translated with community volunteers, and built by student developers at the University of Nebraska. Version 1.6 — April 2026.',
     'about.values.1': 'Free forever',
     'about.values.2': 'Works offline',
     'about.values.3': 'Community-owned content',
 
     'footer.tag': 'Habitat for Humanity Omaha — Home Guide',
     'footer.built': 'Built by student volunteers.',
-    'footer.version': 'Version 1.0 · 2026'
+    'footer.version': 'Version 1.6 · 2026'
   },
   es: {
-    'nav.brand': 'Guía del Hogar HFH Omaha',
+    'nav.brand': 'Guía de Mantenimiento del Hogar',
     'nav.categories': 'Categorías',
     'nav.library': 'Todos los módulos',
     'nav.seasonal': 'Este mes',
@@ -116,8 +123,9 @@ const TRANSLATIONS = {
     'search.count.one': 'resultado',
     'search.count.many': 'resultados',
 
-    'categories.title': 'Navega por categoría',
+    'categories.title': 'Empieza aquí · Navega por categoría',
     'categories.subtitle': '39 módulos en las partes de tu hogar que más atención necesitan.',
+    'categories.hint': 'Toca una tarjeta para abrirla. Todas empiezan cerradas para que la lista sea manejable.',
     'categories.modules.one': 'módulo',
     'categories.modules.many': 'módulos',
 
@@ -132,10 +140,16 @@ const TRANSLATIONS = {
 
     'library.title': 'Biblioteca completa de módulos',
     'library.subtitle': 'Todos los módulos, agrupados por categoría. Haz clic en cualquier tarjeta para ver el video.',
+    'library.hint': 'Toca una categoría para abrirla. Todas empiezan cerradas para que la lista sea manejable.',
+    'library.expandAll': 'Expandir todo',
+    'library.collapseAll': 'Contraer todo',
     'library.badge.steps': 'Paso a paso',
     'library.badge.drag': 'Interactivo',
     'library.badge.checklist': 'Lista',
     'library.minutes': 'min',
+
+    'backtotop.label': 'Arriba',
+    'backtotop.aria': 'Volver arriba',
 
     'module.back': 'Volver',
     'module.steps.title': 'Paso a paso',
@@ -165,13 +179,13 @@ const TRANSLATIONS = {
 
     'about.eyebrow': 'Sobre este proyecto',
     'about.title': 'Hecho con Habitat for Humanity Omaha.',
-    'about.body': 'Esta guía fue diseñada junto a las familias a las que sirve. El contenido se escribió con personal de Habitat, se tradujo con voluntarios de la comunidad y fue construido por estudiantes de la Universidad de Nebraska. Versión 1.0 — Abril 2026.',
+    'about.body': 'Esta guía fue diseñada junto a las familias a las que sirve. El contenido se escribió con personal de Habitat, se tradujo con voluntarios de la comunidad y fue construido por estudiantes de la Universidad de Nebraska. Versión 1.6 — Abril 2026.',
     'about.values.1': 'Gratis para siempre',
     'about.values.2': 'Funciona sin internet',
     'about.values.3': 'Contenido de la comunidad',
 
     'footer.tag': 'Habitat for Humanity Omaha — Guía del Hogar',
     'footer.built': 'Construida por estudiantes voluntarios.',
-    'footer.version': 'Versión 1.0 · 2026'
+    'footer.version': 'Versión 1.6 · 2026'
   }
 };
