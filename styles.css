@@ -1467,3 +1467,277 @@ button.module-card {
   .back-to-top-label { display: none; }
   .back-to-top { padding: 12px; }
 }
+
+/* ============================================================
+   COMMUNITY BOARD — community.html
+   ============================================================ */
+
+/* Active nav link (current page) */
+.nav-link--active {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark) !important;
+  opacity: 1 !important;
+}
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.community-hero {
+  background: var(--color-primary-light);
+  border-bottom: 1px solid var(--color-border);
+  padding: clamp(40px, 6vw, 80px) 0;
+}
+.community-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.community-hero h1 {
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+.community-hero-sub {
+  font-size: clamp(15px, 1.6vw, 17px);
+  color: var(--color-text-secondary);
+  max-width: 560px;
+  margin: 0;
+}
+
+/* ── Board section ─────────────────────────────────────────── */
+.community-board-section {
+  padding-top: 36px;
+  padding-bottom: 80px;
+}
+
+/* ── Filter bar ────────────────────────────────────────────── */
+.community-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.community-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .18s var(--ease), color .18s var(--ease), border-color .18s var(--ease);
+}
+.community-filter-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+/* All — active */
+.community-filter-btn.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+}
+/* Category-specific active states */
+.community-filter-btn--event.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.community-filter-btn--job.is-active {
+  background: var(--color-moss);
+  border-color: var(--color-moss);
+  color: #fff;
+}
+.community-filter-btn--sport.is-active {
+  background: var(--color-sky);
+  border-color: var(--color-sky);
+  color: #fff;
+}
+.community-filter-btn--announcement.is-active {
+  background: var(--color-rose);
+  border-color: var(--color-rose);
+  color: #fff;
+}
+.community-filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.08);
+  font-size: 11px;
+  font-weight: 700;
+}
+.community-filter-btn.is-active .community-filter-count {
+  background: rgba(255,255,255,.25);
+}
+
+/* ── Post grid ─────────────────────────────────────────────── */
+.community-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 600px) {
+  .community-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+  .community-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── Empty state ───────────────────────────────────────────── */
+.community-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+}
+
+/* ── Post card ─────────────────────────────────────────────── */
+.post-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 20px 16px 24px;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+  overflow: hidden;
+}
+.post-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--cat-color, var(--color-primary));
+  border-radius: 4px 0 0 4px;
+  transition: width .2s var(--ease);
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.post-card:hover::before { width: 6px; }
+
+/* Badge */
+.post-card-top { display: flex; align-items: center; gap: 8px; }
+.post-card-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.post-card-badge--event        { background: var(--color-primary-light); color: var(--color-primary-dark); }
+.post-card-badge--job          { background: #e8f5e0; color: #3a6e22; }
+.post-card-badge--sport        { background: #dce8ef; color: #2f4f5e; }
+.post-card-badge--announcement { background: #f8e8e8; color: #8b3a3a; }
+
+/* Title */
+.post-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Meta */
+.post-card-meta {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Body (clamped to 3 lines) */
+.post-card-body {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Footer */
+.post-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+.post-card-contact {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+.post-card-delete {
+  padding: 5px 12px;
+  font-size: 12px;
+  min-height: unset;
+  border-radius: 8px;
+  color: var(--color-rose);
+  border-color: var(--color-rose);
+  margin-left: auto;
+}
+.post-card-delete:hover {
+  background: var(--color-rose);
+  color: #fff;
+}
+
+/* ── Create post form ──────────────────────────────────────── */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.form-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  transition: border-color .18s var(--ease);
+  appearance: auto;
+}
+.form-input:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-color: var(--color-primary);
+}
+textarea.form-input { resize: vertical; min-height: 96px; }
+.form-error {
+  font-size: 12px;
+  color: var(--color-rose);
+  font-weight: 500;
+}
