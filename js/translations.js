@@ -5,6 +5,7 @@ const TRANSLATIONS = {
   en: {
     'nav.brand': 'Maintenance Guide',
     'nav.brand.community': 'Community Post Board',
+    'nav.maintenance': 'Home Maintenance',
     'nav.categories': 'Categories',
     'nav.library': 'All modules',
     'nav.seasonal': 'This month',
@@ -141,6 +142,7 @@ const TRANSLATIONS = {
   es: {
     'nav.brand': 'Guía de Mantenimiento',
     'nav.brand.community': 'Tablero Comunitario',
+    'nav.maintenance': 'Mantenimiento del Hogar',
     'nav.categories': 'Categorías',
     'nav.library': 'Todos los módulos',
     'nav.seasonal': 'Este mes',
