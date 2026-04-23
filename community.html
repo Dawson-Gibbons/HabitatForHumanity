@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#00549A" />
   <meta name="description" content="Habitat for Humanity Omaha Community Board — post events, jobs, sports, and announcements for your neighborhood." />
-  <title>Community Board — Home Maintenance Guide</title>
+  <title>Habitat Central</title>
 
   <link rel="stylesheet" href="styles.css" />
 
@@ -24,12 +24,12 @@
           </svg>
         </span>
         <span class="nav-brand-text">
-          <span data-i18n="nav.brand.community">Habitat Discussion Board</span>
+          <span data-i18n="nav.brand.community">Community Post Board</span>
           <small>Habitat for Humanity · Omaha</small>
         </span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
         <a class="nav-link" href="index.html#seasonal" data-i18n="nav.seasonal">This month</a>
         <a class="nav-link" href="index.html#categories" data-i18n="nav.categories">Categories</a>
         <a class="nav-link nav-link--active" href="community.html" data-i18n="nav.community">Community Board</a>
@@ -43,6 +43,18 @@
         data-i18n-attr="aria-label:lang.toggle.aria">
         <span class="lang-pill" data-lang="en">EN</span>
         <span class="lang-pill" data-lang="es">ES</span>
+      </button>
+
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
       </button>
     </div>
   </header>
@@ -112,7 +124,7 @@
           </svg>
         </span>
         <div>
-          <span data-i18n="footer.tag.community">Habitat Discussion Board</span>
+          <span data-i18n="footer.tag.community">Community Post Board</span>
           <small>Habitat for Humanity · Omaha</small>
           <small data-i18n="footer.built">Built by student volunteers.</small>
         </div>

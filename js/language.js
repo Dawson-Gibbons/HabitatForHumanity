@@ -47,3 +47,27 @@ function initLanguageToggle() {
     setLang(getLang() === 'en' ? 'es' : 'en');
   });
 }
+
+function initMobileNav() {
+  const btn = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  if (!btn || !links) return;
+
+  const close = () => {
+    links.classList.remove('is-open');
+    btn.setAttribute('aria-expanded', 'false');
+  };
+
+  btn.addEventListener('click', () => {
+    const open = links.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  links.addEventListener('click', e => {
+    if (e.target.closest('.nav-link')) close();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close();
+  });
+}

@@ -358,6 +358,7 @@ function boot() {
   applyTranslations(getLang());
   updateLangToggleFace();
   initLanguageToggle();
+  initMobileNav();
   initReveal();
   initBackToTop();
   renderPosts();
