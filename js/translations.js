@@ -3,7 +3,8 @@
 
 const TRANSLATIONS = {
   en: {
-    'nav.brand': 'Home Maintenance Guide',
+    'nav.brand': 'Habitat Maintenance Guide',
+    'nav.brand.community': 'Habitat Discussion Board',
     'nav.categories': 'Categories',
     'nav.library': 'All modules',
     'nav.seasonal': 'This month',
@@ -92,7 +93,8 @@ const TRANSLATIONS = {
     'about.values.2': 'Works offline',
     'about.values.3': 'Community-owned content',
 
-    'footer.tag': 'Habitat for Humanity Omaha — Home Guide',
+    'footer.tag': 'Habitat Maintenance Guide',
+    'footer.tag.community': 'Habitat Discussion Board',
     'footer.built': 'Built by student volunteers.',
     'footer.version': 'Version 1.6 · 2026',
 
@@ -137,7 +139,8 @@ const TRANSLATIONS = {
     'community.nav.back': 'Back to Home Guide'
   },
   es: {
-    'nav.brand': 'Guía de Mantenimiento del Hogar',
+    'nav.brand': 'Guía de Mantenimiento de Habitat',
+    'nav.brand.community': 'Tablero de Discusión de Habitat',
     'nav.categories': 'Categorías',
     'nav.library': 'Todos los módulos',
     'nav.seasonal': 'Este mes',
@@ -226,7 +229,8 @@ const TRANSLATIONS = {
     'about.values.2': 'Funciona sin internet',
     'about.values.3': 'Contenido de la comunidad',
 
-    'footer.tag': 'Habitat for Humanity Omaha — Guía del Hogar',
+    'footer.tag': 'Guía de Mantenimiento de Habitat',
+    'footer.tag.community': 'Tablero de Discusión de Habitat',
     'footer.built': 'Construida por estudiantes voluntarios.',
     'footer.version': 'Versión 1.6 · 2026',
 
