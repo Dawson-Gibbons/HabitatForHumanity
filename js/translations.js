@@ -8,6 +8,7 @@ const TRANSLATIONS = {
     'nav.library': 'All modules',
     'nav.seasonal': 'This month',
     'nav.about': 'About',
+    'nav.community': 'Community Board',
     'lang.toggle': 'Español',
     'lang.toggle.aria': 'Switch to Spanish',
 
@@ -32,7 +33,7 @@ const TRANSLATIONS = {
 
     'categories.title': 'Start here · Browse by category',
     'categories.subtitle': '39 modules across the parts of your home that need attention most.',
-    'categories.hint': 'Tap a card to open it. All categories start closed so the list stays manageable.',
+    'categories.hint': 'Tap a card to open it.',
     'categories.modules.one': 'module',
     'categories.modules.many': 'modules',
 
@@ -93,7 +94,47 @@ const TRANSLATIONS = {
 
     'footer.tag': 'Habitat for Humanity Omaha — Home Guide',
     'footer.built': 'Built by student volunteers.',
-    'footer.version': 'Version 1.6 · 2026'
+    'footer.version': 'Version 1.6 · 2026',
+
+    'community.eyebrow': 'Neighborhood',
+    'community.title': 'Community Post Board',
+    'community.subtitle': 'Events, jobs, and announcements from your Habitat neighbors.',
+
+    'community.filter.all': 'All',
+    'community.filter.event': 'Events',
+    'community.filter.job': 'Jobs',
+    'community.filter.sport': 'Sports',
+    'community.filter.announcement': 'Announcements',
+
+    'community.post.create': 'Post Something',
+    'community.post.empty': 'No posts yet in this category.',
+    'community.post.delete': 'Delete',
+    'community.post.contact': 'Contact',
+    'community.post.by': 'Posted by',
+    'community.post.on': 'on',
+
+    'community.form.title': 'Create a Post',
+    'community.form.field.title': 'Title',
+    'community.form.field.category': 'Category',
+    'community.form.field.date': 'Date',
+    'community.form.field.description': 'Description',
+    'community.form.field.contact': 'Contact (optional)',
+    'community.form.field.author': 'Your Name',
+    'community.form.submit': 'Post to Board',
+    'community.form.cancel': 'Cancel',
+    'community.form.required': 'This field is required.',
+    'community.form.placeholder.title': 'What is your post about?',
+    'community.form.placeholder.desc': 'Share details — who, what, when, where…',
+    'community.form.placeholder.contact': 'Email or phone (shown publicly)',
+    'community.form.placeholder.author': 'Your first name or nickname',
+
+    'community.badge.event': 'Event',
+    'community.badge.job': 'Job',
+    'community.badge.sport': 'Sports',
+    'community.badge.announcement': 'Announcement',
+
+    'community.confirm.delete': 'Remove this post?',
+    'community.nav.back': 'Back to Home Guide'
   },
   es: {
     'nav.brand': 'Guía de Mantenimiento del Hogar',
@@ -101,6 +142,7 @@ const TRANSLATIONS = {
     'nav.library': 'Todos los módulos',
     'nav.seasonal': 'Este mes',
     'nav.about': 'Acerca de',
+    'nav.community': 'Tablero Comunitario',
     'lang.toggle': 'English',
     'lang.toggle.aria': 'Cambiar a inglés',
 
@@ -125,7 +167,7 @@ const TRANSLATIONS = {
 
     'categories.title': 'Empieza aquí · Navega por categoría',
     'categories.subtitle': '39 módulos en las partes de tu hogar que más atención necesitan.',
-    'categories.hint': 'Toca una tarjeta para abrirla. Todas empiezan cerradas para que la lista sea manejable.',
+    'categories.hint': 'Toca una tarjeta para abrirla.',
     'categories.modules.one': 'módulo',
     'categories.modules.many': 'módulos',
 
@@ -186,6 +228,46 @@ const TRANSLATIONS = {
 
     'footer.tag': 'Habitat for Humanity Omaha — Guía del Hogar',
     'footer.built': 'Construida por estudiantes voluntarios.',
-    'footer.version': 'Versión 1.6 · 2026'
+    'footer.version': 'Versión 1.6 · 2026',
+
+    'community.eyebrow': 'Vecindario',
+    'community.title': 'Tablero de Publicaciones',
+    'community.subtitle': 'Eventos, trabajos y anuncios de tus vecinos de Habitat.',
+
+    'community.filter.all': 'Todo',
+    'community.filter.event': 'Eventos',
+    'community.filter.job': 'Trabajo',
+    'community.filter.sport': 'Deportes',
+    'community.filter.announcement': 'Anuncios',
+
+    'community.post.create': 'Publicar algo',
+    'community.post.empty': 'No hay publicaciones en esta categoría.',
+    'community.post.delete': 'Eliminar',
+    'community.post.contact': 'Contacto',
+    'community.post.by': 'Publicado por',
+    'community.post.on': 'el',
+
+    'community.form.title': 'Crear una publicación',
+    'community.form.field.title': 'Título',
+    'community.form.field.category': 'Categoría',
+    'community.form.field.date': 'Fecha',
+    'community.form.field.description': 'Descripción',
+    'community.form.field.contact': 'Contacto (opcional)',
+    'community.form.field.author': 'Tu nombre',
+    'community.form.submit': 'Publicar en el tablero',
+    'community.form.cancel': 'Cancelar',
+    'community.form.required': 'Este campo es obligatorio.',
+    'community.form.placeholder.title': '¿De qué trata tu publicación?',
+    'community.form.placeholder.desc': 'Comparte detalles — quién, qué, cuándo, dónde…',
+    'community.form.placeholder.contact': 'Correo o teléfono (visible públicamente)',
+    'community.form.placeholder.author': 'Tu nombre o apodo',
+
+    'community.badge.event': 'Evento',
+    'community.badge.job': 'Trabajo',
+    'community.badge.sport': 'Deportes',
+    'community.badge.announcement': 'Anuncio',
+
+    'community.confirm.delete': '¿Eliminar esta publicación?',
+    'community.nav.back': 'Volver a la Guía del Hogar'
   }
 };
