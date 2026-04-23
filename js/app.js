@@ -193,6 +193,7 @@ function initModuleModal() {
 function boot() {
   document.documentElement.lang = getLang();
   initLanguageToggle();
+  initMobileNav();
   initSearch();
   initSmoothScroll();
   initStatBadges();
